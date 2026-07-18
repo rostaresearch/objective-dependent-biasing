@@ -1,0 +1,27 @@
+{
+  "point": {
+    "D_edge_meanfield": 0.05755588849113119,
+    "D_edge_resolved": 0.15600271494143692,
+    "ratio": 2.7104562023306342
+  },
+  "block_run": {
+    "D_edge_meanfield": {
+      "median": 0.06261524750451175,
+      "p5": 0.05118659289535343,
+      "p95": 0.07340922699568063,
+      "n": 200
+    },
+    "D_edge_resolved": {
+      "median": 0.1553281893279172,
+      "p5": 0.1464645281342825,
+      "p95": 0.16579299121283106,
+      "n": 200
+    },
+    "ratio": {
+      "median": 2.465557540933999,
+      "p5": 2.087998202177162,
+      "p95": 2.9927893398616217
+    }
+  },
+  "note": "Jhat0 held fixed (pooled mean-field reference); only the bias used to measure the distortion differs. Resamples whole runs, as in ras_pi_block_boot.py, so intervals are directly comparable."
+}

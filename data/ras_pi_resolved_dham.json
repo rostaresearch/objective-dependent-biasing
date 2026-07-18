@@ -1,0 +1,17 @@
+{
+  "pooled mean-field (shipped)": {
+    "Omega_J": 0.9824470761560095,
+    "D_edge": 0.05755588849113119,
+    "regularised": false
+  },
+  "transition-resolved": {
+    "Omega_J": 0.9789045802092186,
+    "D_edge": 0.056399914669661634,
+    "regularised": false
+  },
+  "no unbiasing": {
+    "Omega_J": 0.982690008051013,
+    "D_edge": 0.05705237680382386,
+    "regularised": false
+  }
+}
