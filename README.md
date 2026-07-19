@@ -141,11 +141,9 @@ script (uses the deposited numbers).
 | File | Role |
 |---|---|
 | `code/ras_pi_audit.py` | Canonical Ras applied-bias analysis: builds the 2D MSM on the phosphate-release CV, computes `Ω_J` and `D_edge`. |
-| `code/ras_pi_audit_boot.py`, `code/ras_pi_block_boot.py` | Bootstrap confidence intervals (block bootstrap over propagations for correct dependence). |
+| `code/ras_pi_audit_boot.py`, `code/ras_pi_block_boot.py` | Bootstrap confidence intervals (block bootstrap over propagations for correct dependence). Also emit the pseudocount-`α` and grid×feature sensitivity sweeps (the `alpha_sweep` / `grid_feature_sweep` sections of `data/ras_pi_audit.json`). |
 | `code/ras_pi_jensen_Rij.py` | Jensen-convexity correction term `R_ij` for the reweighting. |
 | `code/ras_pi_resolved_dham.py`, `code/ras_pi_dedge_resolved_boot.py`, `code/ras_pi_dedge95.py` | Propagation-resolved (vs mean-field) bias treatment and its edge-distortion. |
-| `code/sensitivity_alpha_sweep.py` | Pseudocount-`α` regularization sensitivity. |
-| `code/sensitivity_grid_feature_sweep.py` | Grid-resolution × orthogonal-feature robustness sweep. |
 | `code/export_ras_pi_mat.py` | Bias-scaling (Pareto) sweep; exports `data/ras_pi_fig_data.mat` for the MATLAB figures. |
 
 ### Figure scripts
