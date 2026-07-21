@@ -10,16 +10,18 @@ This reproduces the continuation chain, captures its theta, pools it with every 
 we have, and writes the single winner (value + theta + u) that all figures and text must use.
 """
 from __future__ import annotations
+import os
 import sys, json, time
 import numpy as np
-sys.path.insert(0, r'C:\Users\edina\Dropbox\MSM_Roundtable_2026')
+sys.path.insert(0, PATH)
 from scipy.optimize import minimize
 from scipy.io import loadmat
 import analytic_lib as L
 import optimal_spectral_bias as O
 from rerun_polynomial_optionC_lean import u_of, make_fg
 
-PATH = r'C:\Users\edina\Dropbox\MSM_Roundtable_2026'
+PATH = os.environ.get('MSM_ROOT',
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # bundle root; override via MSM_ROOT
 U = 3.0
 
 

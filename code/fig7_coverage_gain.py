@@ -10,6 +10,7 @@ Two panels: (a) 2D grid, (b) pentapeptide negative control.  One shared legend,
 upper-right of panel (b).  Output overwrites the manuscript figure fig2_notitle
 (legacy name) as .pdf + .png in rosta_jctc_v5/figures/.
 """
+import os
 import json
 import numpy as np
 import matplotlib
@@ -17,7 +18,8 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 
-ROOT = r'C:\Users\edina\Dropbox\MSM_Roundtable_2026'
+ROOT = os.environ.get('MSM_ROOT',
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # bundle root; override via MSM_ROOT
 F = json.load(open(f'{ROOT}/filtered_results.json'))
 
 ORDER = {'grid': ['Committor', 'EigVec2', 'MFPTcv', 'x'],

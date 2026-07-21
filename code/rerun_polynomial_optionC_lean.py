@@ -6,9 +6,10 @@ best over a handful of physically-motivated seeds plus a few random directions. 
 genuine degree-4 polynomial (never clipped), midrange-centred and rescaled to spread<=2U.
 """
 from __future__ import annotations
+import os
 import sys, json, time
 import numpy as np
-sys.path.insert(0, r'C:\Users\edina\Dropbox\MSM_Roundtable_2026')
+sys.path.insert(0, PATH)
 from scipy.optimize import minimize
 from scipy.io import loadmat
 import analytic_lib as L
@@ -16,7 +17,8 @@ import optimal_spectral_bias as O
 from per_state_ceiling import gap_and_grad
 from mfpt_per_state import mfpt_and_grad
 
-PATH = r'C:\Users\edina\Dropbox\MSM_Roundtable_2026'
+PATH = os.environ.get('MSM_ROOT',
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # bundle root; override via MSM_ROOT
 ALPHA = 0.001
 
 

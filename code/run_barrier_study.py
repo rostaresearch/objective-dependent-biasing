@@ -15,9 +15,14 @@ For each network and each CV in {x (or basic), EigVec2, Committor, MFPT-CV}:
 Saves results.json + arrays for figure generation.
 """
 from __future__ import annotations
+import os
 import json
 import numpy as np
 import analytic_lib as L
+
+# Bundle root: override with the MSM_ROOT environment variable.
+PATH = os.environ.get('MSM_ROOT',
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 def _T_to_K(T: np.ndarray, tau: float = 1.0) -> np.ndarray:

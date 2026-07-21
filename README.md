@@ -1,9 +1,9 @@
-# Objective-dependent optimal biasing of Markov state networks
+# Objective-Dependent Biasing of Markov Networks for Relaxation and First Passage
 
 Code and processed data to reproduce every figure and table in
 
-> C. Wang, A. Fadhluddin, E. Rosta,
-> *Objective-dependent optimal biasing of Markov state networks*,
+> Q. Wang, A. Fadhluddin, E. Rosta,
+> *Objective-Dependent Biasing of Markov Networks for Relaxation and First Passage*,
 > Journal of Chemical Theory and Computation (submitted).
 > Corresponding author: Edina Rosta (`e.rosta@ucl.ac.uk`), University College London.
 
@@ -148,7 +148,7 @@ script (uses the deposited numbers).
 
 ### Figure scripts
 
-Python (matplotlib): `code/make_figures.py`, `code/make_figures_v2.py`,
+Python (matplotlib): `code/make_figures_v2.py`,
 `code/make_final_figure.py`, `code/regen_fig_spectral_bias.py`.
 MATLAB: `code/plot_grid_2d.m`, `code/plot_rkhs_2d.m`, `code/plot_asymmetric_1d.m`,
 `code/plot_coordfree_bias.m`, `code/plot_mechanism_v2.m`, `code/plot_fig2_us.m`,

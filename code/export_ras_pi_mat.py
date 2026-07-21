@@ -20,7 +20,7 @@ import os
 P = os.environ.get('MSM_ROOT',
      os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, P)
-sys.path.insert(0, os.environ.get('DHAM_HIGHD', PATH))
+sys.path.insert(0, os.environ.get('DHAM_HIGHD', P))
 
 from mechanism_audit_ras_proper import dham_unbias, KBT
 from mechanism_audit_highd_n20 import (stationary_from_K, committor_K,

@@ -1,4 +1,4 @@
-"""Bootstrap CIs for the Ras Pi-unbinding mechanism audit (Balint's 1D_PMg runs).
+"""Bootstrap CIs for the Ras Pi-unbinding mechanism audit (the 1D_PMg runs).
 
 Uses bootstrap_audit/compute_diagnostics from mechanism_audit_ras_proper.py
 unchanged (same DHAM sign, pseudocount rule, 200 multinomial resamples), so the
@@ -9,8 +9,13 @@ Also sweeps 3 grids x 3 orthogonal features for robustness, and alpha over
 three orders of magnitude.
 """
 from __future__ import annotations
+import os
 import sys, json
 import numpy as np
+
+# Bundle root: override with the MSM_ROOT environment variable.
+PATH = os.environ.get('MSM_ROOT',
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 sys.path.insert(0, PATH)
 from mechanism_audit_ras_proper import bootstrap_audit, compute_diagnostics

@@ -1,5 +1,5 @@
 % Regenerate the four Ras figures from the CORRECTED Pi-unbinding audit
-% (Balint's 1D_PMg MFPT runs). Replaces the orchestrator-derived versions.
+% (the 1D_PMg MFPT runs). Replaces the orchestrator-derived versions.
 %
 % Data: ras_pi_fig_data.mat  (from export_ras_pi_mat.py)
 % Outputs: fig_ras_applied_audit, fig_ras_alpha_sensitivity,

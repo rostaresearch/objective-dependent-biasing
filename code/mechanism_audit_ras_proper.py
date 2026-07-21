@@ -1,6 +1,6 @@
 """Proper Ras phosphate-unbinding mechanism audit.
 
-Uses the bias Balint actually applied (recovered from each iter's
+Uses the bias actually applied (recovered from each iter's
 biased_log.json on bell), DHAM-reweights to recover K^0, and reports
 the four mechanism-distortion diagnostics at the actually-applied bias
 with bootstrap 5-95% CIs.
@@ -32,14 +32,14 @@ import matplotlib.pyplot as plt
 
 
 HERE      = Path(__file__).resolve().parent
-DATA_DIR  = Path("C:/Users/edina/Dropbox/method/RKHS/claude/ras_lda_fm")
+DATA_DIR  = Path(os.environ.get('RAS_RAW', 'ras_lda_fm'))
 META_DIR  = DATA_DIR / "orch_iter_metadata"
 NPZ       = DATA_DIR / "ras_orchestrator_mastercv_bell.npz"
 
 T_K  = 300.0                    # KOMBI simulation temperature (config.py); the bias
 KBT  = 8.31446261815e-3 * T_K   # was applied at 300 K, so reweight at 300 K. ~= 2.494
 
-sys.path.insert(0, str(Path("C:/Users/edina/Dropbox/method/RKHS/claude/efficient_DHAM_HighD_clean")))
+sys.path.insert(0, os.environ.get('DHAM_HIGHD', '.'))
 from mechanism_audit_highd_n20 import (
     stationary_from_K, committor_K, positive_net_current,
     tilt_generator,

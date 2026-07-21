@@ -12,10 +12,12 @@ Reported for both bias representations, block-bootstrapped over whole runs so th
 is comparable to the mean.
 """
 from __future__ import annotations
+import os
 import sys, json
 import numpy as np
 
-P = r'C:\Users\edina\Dropbox\MSM_Roundtable_2026'
+P = os.environ.get('MSM_ROOT',
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # bundle root; override via MSM_ROOT
 sys.path.insert(0, P)
 from mechanism_audit_ras_proper import regularise_if_disconnected, dham_unbias, KBT
 from mechanism_audit_highd_n20 import (stationary_from_K, committor_K,

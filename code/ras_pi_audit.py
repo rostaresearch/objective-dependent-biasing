@@ -1,19 +1,24 @@
-"""Mechanism audit on BALINT's Ras phosphate-unbinding MFPT runs (1D_PMg).
+"""Mechanism audit on the Ras phosphate-unbinding MFPT runs (1D_PMg).
 
 Replaces the orchestrator (GTP->GDP conformational) data with the actual
 Pi-unbinding data the manuscript describes:
   CV        = P-Mg distance (Angstrom), from tj/RL_MFPT/1D_PMg/distance/
   bias V(s) = sum_j 4.184*a_j*exp(-(s-b_j)^2/(2 c_j^2))  kJ/mol, from params/
   A = {CV < 5.0} (phosphate near pocket), B = {CV > 8.0} (fully released;
-      8 A is Balint's own release criterion in explore_sim_PMg.py)
+      8 A is the release criterion used in the source simulations)
 
 Reuses compute_diagnostics/bootstrap_audit from mechanism_audit_ras_proper.py
 unchanged, so DHAM sign, strict boundaries, pseudocount and bootstrap are
 identical to the shipped audit. Only the input data differ.
 """
 from __future__ import annotations
+import os
 import sys, json
 import numpy as np
+
+# Bundle root: override with the MSM_ROOT environment variable.
+PATH = os.environ.get('MSM_ROOT',
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 sys.path.insert(0, PATH)
 from mechanism_audit_ras_proper import compute_diagnostics, bootstrap_audit, KBT

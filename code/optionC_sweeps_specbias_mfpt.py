@@ -15,15 +15,17 @@ would erase it.
 So: for each budget/barrier, take the option-C SPECTRAL optimum and evaluate its MFPT.
 """
 from __future__ import annotations
+import os
 import sys, json, time
 import numpy as np
-sys.path.insert(0, r'C:\Users\edina\Dropbox\MSM_Roundtable_2026')
+sys.path.insert(0, PATH)
 from scipy.optimize import minimize
 import analytic_lib as L
 import optimal_spectral_bias as O
 from rerun_polynomial_optionC_lean import u_of, make_fg
 
-PATH = r'C:\Users\edina\Dropbox\MSM_Roundtable_2026'
+PATH = os.environ.get('MSM_ROOT',
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # bundle root; override via MSM_ROOT
 
 
 def opt_gap(K0, Fb, U, edges, A, B, seeds, maxiter=300):

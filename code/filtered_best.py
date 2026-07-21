@@ -25,10 +25,12 @@ For each network / CV / objective we report:
 Saves filtered_results.json for the bar chart and the tables.
 """
 from __future__ import annotations
+import os
 import json
 import numpy as np
 
-PATH = r'C:\Users\edina\Dropbox\MSM_Roundtable_2026'
+PATH = os.environ.get('MSM_ROOT',
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # bundle root; override via MSM_ROOT
 OV_MIN, COVFAIL_MAX, W_MIN = 0.05, 0.01, 3
 SCORE  = {'barrier': 'barrier_speedup',           'rate': 'rate_speedup'}
 COVKEY = {'barrier': 'coverage_failure_pdagger',  'rate': 'coverage_failure_rate'}

@@ -1,6 +1,6 @@
 """Mechanism-conservation audit on REAL Ras phosphate-unbinding data.
 
-Loads Balint's master-CV orchestrator trajectories
+Loads the master-CV orchestrator trajectories
 ($RAS_RAW/
  ras_orchestrator_mastercv_bell.npz)
 which contain 24 trajectories spanning the GTP -> GDP transition along a

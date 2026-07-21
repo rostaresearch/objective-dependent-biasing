@@ -14,12 +14,14 @@ polynomial. See optionC_sweeps_specbias_mfpt.py.
 Writes a backup first and asserts the shared point matches the headline.
 """
 from __future__ import annotations
+import os
 import json
 import shutil
 import numpy as np
 from scipy.io import loadmat, savemat
 
-PATH = r'C:\Users\edina\Dropbox\MSM_Roundtable_2026'
+PATH = os.environ.get('MSM_ROOT',
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # bundle root; override via MSM_ROOT
 MAT = f'{PATH}/grid_2d_data.mat'
 BAK = f'{PATH}/grid_2d_data_preOptionC.mat'
 

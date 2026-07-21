@@ -14,10 +14,15 @@ where  M_NN m_N = -1  and  M_NN^T lambda_N = a  (a = 1/|A| on A, 0 else).
 Embeds m_N, lambda_N to length-n with zeros on the target B.
 """
 from __future__ import annotations
+import os
 import time
 import numpy as np
 from scipy.optimize import minimize
 import analytic_lib as L
+
+# Bundle root: override with the MSM_ROOT environment variable.
+PATH = os.environ.get('MSM_ROOT',
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 def mfpt_and_grad(u: np.ndarray, K0: np.ndarray,
