@@ -1,4 +1,11 @@
 """
+OBSOLETE / SUPERSEDED -- not part of the canonical pipeline.
+
+The canonical generator for the published umbrella-coverage figure (fig2_notitle)
+is ``fig7_coverage_gain.py``, which reads the current ``filtered_results.json``
+schema (per_cv[cv][objective]['valid'/'best_found']) and writes to figures/.
+This script uses an earlier results schema and is retained only for reference.
+
 Final headline figure for the contribution.
 Shows unconstrained best (light) overlaid with valid-overlap best (solid)
 for both barrier and rate objectives.  Greyed bars indicate no valid protocol

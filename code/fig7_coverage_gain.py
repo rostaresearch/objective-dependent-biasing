@@ -7,8 +7,9 @@ Faded + hatched   = best protocol found (W>=3) that FAILS the screen, annotated
 W=1 "mirage" protocols are not plotted (they go in the companion table).
 
 Two panels: (a) 2D grid, (b) pentapeptide negative control.  One shared legend,
-upper-right of panel (b).  Output overwrites the manuscript figure fig2_notitle
-(legacy name) as .pdf + .png in rosta_jctc_v5/figures/.
+upper-right of panel (b).  This is the canonical generator for the manuscript
+umbrella-coverage figure (legacy name fig2_notitle); output is written as
+.pdf + .png to figures/.
 """
 import os
 import json
@@ -19,8 +20,10 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 
 ROOT = os.environ.get('MSM_ROOT',
-        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # bundle root; override via MSM_ROOT
-F = json.load(open(f'{ROOT}/filtered_results.json'))
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repository root; override via MSM_ROOT
+DATA = os.path.join(ROOT, 'data')
+FIGURES = os.path.join(ROOT, 'figures')
+F = json.load(open(f'{DATA}/filtered_results.json'))
 
 ORDER = {'grid': ['Committor', 'EigVec2', 'MFPTcv', 'x'],
          'pentapeptide': ['Basic', 'Committor', 'EigVec2', 'MFPTcv']}
@@ -69,6 +72,6 @@ axes[1].legend(handles=[
     fontsize=8.5, loc='upper right', framealpha=0.95)
 
 for ext in ('pdf', 'png'):
-    fig.savefig(f'{ROOT}/rosta_jctc_v5/figures/fig2_notitle.{ext}',
+    fig.savefig(os.path.join(FIGURES, f'fig2_notitle.{ext}'),
                 dpi=200, bbox_inches='tight')
-print('wrote rosta_jctc_v5/figures/fig2_notitle.pdf/.png')
+print('wrote figures/fig2_notitle.pdf/.png')

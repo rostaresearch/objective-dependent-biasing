@@ -43,16 +43,18 @@ monotone and never drops below one — so the slowdown is a property of applying
 *spectral*-optimal bias to a directed transition, not of the budget.
 
 A second contribution is a pair of **mechanism-conservation diagnostics** for a
-bias that has actually been applied to real data:
+bias applied to MD trajectories of a biomolecular system:
 
 - **`Ω_J`** — reactive-current overlap between the biased and unbiased
   transition-path-theory currents (1 = mechanism preserved).
 - **`D_edge`** — edge-rate distortion, the relative change in per-edge rates.
 
-These are applied to real Ras phosphate-unbinding trajectories to show that a
-production bias can be strong enough to accelerate sampling while still conserving
-the release mechanism, and to define a decision curve (`Ω_J` vs model MFPT
-speedup) for choosing a production bias amplitude.
+These are applied to MD trajectories of a biomolecular system (Ras phosphate
+unbinding) and their recorded applied biases as a **model-conditional** analysis:
+they quantify overlap within the reconstructed tilted-MSM model, and independent
+biased-current estimation would be required for empirical mechanism validation.
+The same analysis defines a decision curve (`Ω_J` vs model MFPT speedup) for
+choosing a production bias amplitude.
 
 ---
 
@@ -160,7 +162,8 @@ the MATLAB set. Editable `.fig` sources accompany each MATLAB figure.
 ## Protocol details
 
 - **Bias budget.** The dimensionless bias `bᵢ = β Uᵢ` is constrained by a box
-  `|bᵢ| ≤ U_max` (default `U_max = 3 k_BT`). Because `Kᵇ` depends only on the
+  `|bᵢ| ≤ U_max` (default dimensionless `U_max = 3`, i.e. a physical energy span
+  of `3 k_BT` per side in the centered gauge). Because `Kᵇ` depends only on the
   differences `b_j − b_i`, the box is stated in its shift-invariant form
   `maxᵢ bᵢ − minᵢ bᵢ ≤ 2 U_max`, with the gauge fixed by midrange centering.
 - **Temperature.** `T = 300 K`, `k_BT = 8.31446261815·10⁻³ × T` kJ/mol, matching

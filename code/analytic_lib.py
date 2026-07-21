@@ -390,8 +390,12 @@ def umbrella_family_metrics(
         out["barrier_speedup"] = out["E_barrier_unbiased"] / max(out["E_barrier_US"], EPS)
 
         # Coverage failure diagnostic: fraction of p_dagger sitting on states
-        # with effectively zero coverage.
-        epsilon = 1.0 / max(N_eff_per_window.mean(), EPS)    # one effective sample
+        # with effectively zero coverage.  I_i is an expected effective *count*
+        # (sum_i I_i = total effective samples), so "one effective observation"
+        # is I_i = 1; a state counts as effectively unsampled when I_i < 1.
+        # (Previously 1/<N_eff>, which was dimensionally wrong -- it compared a
+        # count to an inverse-count and scaled with the budget.)
+        epsilon = 1.0
         uncovered = I_i[S] < epsilon
         out["coverage_failure_pdagger"] = float(
             (pi0[S] * uncovered).sum() / max(p_dagger, EPS)

@@ -30,7 +30,9 @@ import json
 import numpy as np
 
 PATH = os.environ.get('MSM_ROOT',
-        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # bundle root; override via MSM_ROOT
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repository root; override via MSM_ROOT
+DATA = os.path.join(PATH, 'data')       # deposited inputs/outputs live under data/
+FIGURES = os.path.join(PATH, 'figures') # figures live under figures/
 OV_MIN, COVFAIL_MAX, W_MIN = 0.05, 0.01, 3
 SCORE  = {'barrier': 'barrier_speedup',           'rate': 'rate_speedup'}
 COVKEY = {'barrier': 'coverage_failure_pdagger',  'rate': 'coverage_failure_rate'}
@@ -71,7 +73,7 @@ def _slim(r, obj):
 
 
 def main():
-    with open(f'{PATH}/barrier_study.json') as f:
+    with open(f'{DATA}/barrier_study.json') as f:
         R = json.load(f)
 
     out = {'screen': dict(coverage_failure_max=COVFAIL_MAX,
@@ -102,7 +104,7 @@ def main():
                 return f"FAILS  best {f['score']:.3g} @Phi={f['coverage_failure']:.3f}" if f else "--"
             print(f"  {cv:10s} | barrier: {show(b):<34s} | rate: {show(r_)}")
 
-    with open(f'{PATH}/filtered_results.json', 'w') as f:
+    with open(f'{DATA}/filtered_results.json', 'w') as f:
         json.dump(out, f, indent=2, default=float)
     print('\nSaved filtered_results.json')
 

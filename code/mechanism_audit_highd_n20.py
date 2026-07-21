@@ -37,8 +37,15 @@ from scipy.linalg import solve
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-import openmm as mm
-import openmm.unit as unit
+# OpenMM is only needed to build/run the toy N=20 reference system.  The
+# dependency-light linear-algebra helpers below (stationary_from_K, committor_K,
+# positive_net_current, tilt_generator) are re-used by the processed-data Ras
+# analysis, which must import without OpenMM installed.
+try:
+    import openmm as mm
+    import openmm.unit as unit
+except ImportError:                       # pragma: no cover
+    mm = unit = None
 
 HERE = Path(__file__).resolve().parent
 
