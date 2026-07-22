@@ -5,7 +5,7 @@ unchanged (same DHAM sign, pseudocount rule, 200 multinomial resamples), so the
 methodology matches the shipped audit exactly; only the data differ.
 
 Canonical projection: 12x8 grid, A={CV<5.0 A}, B={CV>8.0 A}, alpha=1e-3.
-Also sweeps 3 grids x 3 orthogonal features for robustness, and alpha over
+Also sweeps 3 grids x 3 auxiliary features for robustness, and alpha over
 three orders of magnitude.
 """
 from __future__ import annotations

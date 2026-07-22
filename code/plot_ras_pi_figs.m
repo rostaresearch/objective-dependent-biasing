@@ -88,7 +88,7 @@ errorbar(ax, xx, de, de-del, deh-de,'k','LineStyle','none','LineWidth',2,'CapSiz
 set(ax,'XTick',xx,'XTickLabel',labs,'XLim',[0.4 n+0.6],'YLim',[0 0.09]);
 xtickangle(ax,32); ylabel(ax,'D_{edge}','FontSize',FS_LAB);
 title(ax,'(b) edge-rate distortion','FontSize',FS_TITLE,'FontWeight','normal'); clean(ax,FS_AX);
-title(tl,'Grid and orthogonal-feature sensitivity (90% bootstrap intervals)','FontSize',17,'FontName','Arial');
+title(tl,'Grid and auxiliary-feature sensitivity (90% bootstrap intervals)','FontSize',17,'FontName','Arial');
 sv(f3,'fig_ras_grid_feature_sensitivity');
 
 %% ---- FIG 4: bias-scaling / Pareto ----
