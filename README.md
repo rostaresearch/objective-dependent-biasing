@@ -96,6 +96,23 @@ No compilation is required.
 
 ---
 
+## Tests
+
+A fast smoke suite (`tests/test_smoke.py`) checks that the archive is a coherent,
+runnable bundle — path resolution, core imports, closed-form identities, the
+validity-screen constants and `ε = 1` coverage threshold, and that a deposited
+result regenerates from its deposited input. Run it first after cloning:
+
+```bash
+python -m pytest tests/          # needs pytest
+python tests/test_smoke.py       # standalone, no pytest
+```
+
+The GitHub Actions workflow `.github/workflows/ci.yml` runs it on Python 3.9 and
+3.12. See `tests/README.md` for the full list of what is checked.
+
+---
+
 ## How the pipeline is organized
 
 The computation is two-tier: **Python compute scripts** read the processed inputs
@@ -163,8 +180,17 @@ Other figures — Python (matplotlib): `code/regen_fig_spectral_bias.py`,
 `code/make_figures_v2.py`.
 MATLAB: `code/plot_grid_2d.m`, `code/plot_rkhs_2d.m`, `code/plot_asymmetric_1d.m`,
 `code/plot_coordfree_bias.m`, `code/plot_mechanism_v2.m`,
-`code/plot_ras_pi_figs.m` (the Ras figures). `code/generate_all_figs.m` runs the
-MATLAB set. Editable `.fig` sources accompany each MATLAB figure.
+`code/plot_ras_pi_figs.m` (the Ras figures, including the bias-scaling Pareto
+figure with block-bootstrap bands). `code/generate_all_figs.m` runs the MATLAB
+set. Editable `.fig` sources accompany each MATLAB figure.
+
+The two-panel Ras phosphate-release figure is assembled by
+`code/assemble_figure13.py`: panel (a) is the author-rendered molecular
+schematic, deposited as the static asset `figures/fig_ras_pathway_panelA.png`
+(it needs the raw trajectories and a molecular-graphics session and cannot be
+regenerated from the processed inputs); panel (b), the `D_edge` grid×feature
+robustness bars with 90% block-bootstrap intervals, is rebuilt from
+`data/ras_pi_audit.json`.
 
 ---
 

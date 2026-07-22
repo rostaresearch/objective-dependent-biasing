@@ -11,16 +11,16 @@ serves as a sanity check on the headline Omega_J: overlap must degrade as the
 bias is scaled up.
 """
 from __future__ import annotations
-import sys, json
+import os, sys, json
 import numpy as np
 from scipy.io import savemat
 
-import os
-# Bundle root: override with the MSM_ROOT environment variable.
-P = os.environ.get('MSM_ROOT',
-     os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-sys.path.insert(0, P)
-sys.path.insert(0, os.environ.get('DHAM_HIGHD', P))
+# Resolve paths portably (no machine-specific locations, per the DAS):
+# honour $MSM_ROOT if set, else auto-detect the repository root from this file.
+PATH = os.environ.get('MSM_ROOT',
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # <root>/code/ -> <root>
+DATA = os.path.join(PATH, 'data')
+sys.path.insert(0, os.path.join(PATH, 'code'))
 
 from mechanism_audit_ras_proper import dham_unbias, KBT
 from mechanism_audit_highd_n20 import (stationary_from_K, committor_K,
@@ -90,11 +90,15 @@ def main():
         print(f"{a:6.2f} {oj:9.4f} {de:8.4f} {s_mfpt:10.3f}")
 
     rows = np.array(rows)
-    J = json.load(open(f'{P}/ras_pi_audit.json'))
+    # Block-bootstrap-over-runs CIs for the scaling curve (ras_pareto_boot.py);
+    # same resampling unit as the applied-bias and grid-feature panels.
+    PB = json.load(open(os.path.join(DATA, 'ras_pi_pareto_boot.json')))
+    assert np.allclose(PB['alpha'], rows[:, 0]), "pareto-boot alpha grid mismatch"
+    J = json.load(open(os.path.join(DATA, 'ras_pi_audit.json')))
     can, sweep, asw = J['canonical'], J['grid_feature_sweep'], J['alpha_sweep']
     # Canonical bars must show BLOCK-bootstrap CIs (resampling whole runs), not the
     # i.i.d.-transition CIs, which are ~13-19x too narrow. See ras_pi_block_boot.py.
-    BB = json.load(open(f'{P}/ras_pi_blockboot.json'))['block_run']
+    BB = json.load(open(os.path.join(DATA, 'ras_pi_blockboot.json')))['block_run']
     can = dict(can, Omega_J=BB['Omega_J'], D_edge=BB['D_edge'])
 
     out = dict(
@@ -116,10 +120,15 @@ def main():
         al_alpha=np.array([r['alpha'] for r in asw]),
         al_oj=np.array([r['Omega_J']['median'] for r in asw]),
         al_de=np.array([r['D_edge']['median'] for r in asw]),
-        # scaling / Pareto
+        # scaling / Pareto (central line = full-data point estimate)
         sc_alpha=rows[:, 0], sc_oj=rows[:, 1], sc_de=rows[:, 2], sc_smfpt=rows[:, 3],
+        # block-bootstrap-over-runs 5/95 bands for each scaling curve
+        sc_oj_lo=np.array(PB['Omega_J']['p5']), sc_oj_hi=np.array(PB['Omega_J']['p95']),
+        sc_de_lo=np.array(PB['D_edge']['p5']),  sc_de_hi=np.array(PB['D_edge']['p95']),
+        sc_sm_lo=np.array(PB['S_MFPT']['p5']),  sc_sm_hi=np.array(PB['S_MFPT']['p95']),
+        sc_nboot=PB['n_usable'],
     )
-    savemat(f'{P}/ras_pi_fig_data.mat', out)
+    savemat(os.path.join(DATA, 'ras_pi_fig_data.mat'), out)
     print(f"\nApplied bias (alpha=1): Omega_J={rows[ALPHAS==1,1][0]:.4f}  "
           f"S_MFPT={rows[ALPHAS==1,3][0]:.2f}")
     print('saved ras_pi_fig_data.mat')

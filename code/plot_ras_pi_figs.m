@@ -1,5 +1,5 @@
 % Regenerate the four Ras figures from the CORRECTED Pi-unbinding audit
-% (the 1D_PMg MFPT runs). Replaces the orchestrator-derived versions.
+% (Balint's 1D_PMg MFPT runs). Replaces the orchestrator-derived versions.
 %
 % Data: ras_pi_fig_data.mat  (from export_ras_pi_mat.py)
 % Outputs: fig_ras_applied_audit, fig_ras_alpha_sensitivity,
@@ -13,14 +13,11 @@ clear; close all;
 % data root or inside a code/ subdirectory of it.
 PATH = getenv('MSM_ROOT');
 if isempty(PATH)
-    here = fileparts(mfilename('fullpath'));
-    if exist(fullfile(here, 'ras_pi_fig_data.mat'), 'file')
-        PATH = here;                 % script sits alongside the data
-    else
-        PATH = fileparts(here);      % script is in <root>/code/
-    end
+    PATH = fileparts(fileparts(mfilename('fullpath')));   % <root>/code/ -> <root>
 end
-S = load(fullfile(PATH, 'ras_pi_fig_data.mat'));
+DATA = fullfile(PATH, 'data');
+FIGURES = fullfile(PATH, 'figures');
+S = load(fullfile(DATA, 'ras_pi_fig_data.mat'));
 
 FS_AX = 20; FS_LAB = 22; FS_TITLE = 21; FS_LEG = 16;
 set(groot,'defaultAxesFontName','Arial'); set(groot,'defaultTextFontName','Arial');
@@ -30,7 +27,7 @@ set(groot,'defaultFigureColor','w');
 col_o = [0.12 0.47 0.71];   % Omega_J
 col_d = [0.84 0.15 0.16];   % D_edge
 
-sv = @(f,n) saveall(f, fullfile(PATH,n));
+sv = @(f,n) saveall(f, fullfile(FIGURES,n));
 
 %% ---- FIG 1: applied-bias audit (canonical bars + 90% CI) ----
 f1 = figure('Position',[80 80 900 640]); ax = axes(f1); hold(ax,'on');
@@ -98,10 +95,18 @@ sv(f3,'fig_ras_grid_feature_sensitivity');
 f4 = figure('Position',[60 60 1500 620]);
 tl = tiledlayout(f4,1,2,'Padding','compact','TileSpacing','compact');
 a=double(S.sc_alpha(:)); so=double(S.sc_oj(:)); sd=double(S.sc_de(:)); sm=double(S.sc_smfpt(:));
+% block-bootstrap-over-runs 5/95 bands (ras_pareto_boot.py)
+ojl=double(S.sc_oj_lo(:)); ojh=double(S.sc_oj_hi(:));
+del=double(S.sc_de_lo(:)); deh=double(S.sc_de_hi(:));
+sml=double(S.sc_sm_lo(:)); smh=double(S.sc_sm_hi(:));
+bandfill = @(ax,xx,lo,hi,c) fill(ax,[xx;flipud(xx)],[lo;flipud(hi)],c, ...
+    'FaceAlpha',0.18,'EdgeColor','none','HandleVisibility','off');
 ax = nexttile(tl); hold(ax,'on'); yyaxis(ax,'left');
+bandfill(ax,a,ojl,ojh,col_o);
 plot(ax,a,so,'-o','Color',col_o,'MarkerFaceColor',col_o,'MarkerSize',11,'LineWidth',2.6);
-ylabel(ax,'\Omega_J','FontSize',FS_LAB); set(ax,'YColor',col_o,'YLim',[0.8 1.02]);
+ylabel(ax,'\Omega_J','FontSize',FS_LAB); set(ax,'YColor',col_o,'YLim',[0.7 1.02]);
 yyaxis(ax,'right');
+bandfill(ax,a,del,deh,col_d);
 plot(ax,a,sd,'-s','Color',col_d,'MarkerFaceColor',col_d,'MarkerSize',11,'LineWidth',2.6);
 ylabel(ax,'D_{edge}','FontSize',FS_LAB); set(ax,'YColor',col_d);
 xline(ax,1,'--','Color',[0.35 0.35 0.35],'LineWidth',2,'Label','applied bias', ...
@@ -109,8 +114,13 @@ xline(ax,1,'--','Color',[0.35 0.35 0.35],'LineWidth',2,'Label','applied bias', .
 xlabel(ax,'bias scaling \alpha','FontSize',FS_LAB);
 title(ax,'(a) mechanism vs bias amplitude','FontSize',FS_TITLE,'FontWeight','normal'); clean(ax,FS_AX);
 ax = nexttile(tl); hold(ax,'on');
+% shade the MFPT-speedup band along the (Omega_J, S_MFPT) trajectory
+fill(ax,[so;flipud(so)],[sml;flipud(smh)],[0.30 0.30 0.30], ...
+     'FaceAlpha',0.15,'EdgeColor','none','HandleVisibility','off');
 plot(ax,so,sm,'-o','Color',[0.30 0.30 0.30],'MarkerFaceColor',[0.30 0.30 0.30],'MarkerSize',11,'LineWidth',2.6);
 k = find(abs(a-1)<1e-9);
+errorbar(ax,so(k),sm(k),sm(k)-sml(k),smh(k)-sm(k),'k','LineStyle','none', ...
+         'LineWidth',2.2,'CapSize',14,'HandleVisibility','off');
 plot(ax,so(k),sm(k),'p','MarkerSize',30,'MarkerFaceColor',[0.95 0.75 0.10],'MarkerEdgeColor','k','LineWidth',1.5);
 text(ax,so(k)-0.006,sm(k)*0.45,'applied bias','FontSize',16,'FontName','Arial', ...
      'HorizontalAlignment','left');
@@ -124,7 +134,7 @@ title(ax,'(b) acceleration-conservation tradeoff','FontSize',FS_TITLE,'FontWeigh
 %  the reconstructed MSM" -- are stated in the figure caption.)
 sv(f4,'fig_ras_pareto_demo');
 
-fprintf('Saved 4 Ras figures (.png/.pdf/.fig) to %s\n', PATH);
+fprintf('Saved 4 Ras figures (.png/.pdf/.fig) to %s\n', FIGURES);
 
 function clean(ax,fs)
     set(ax,'TickDir','out','Box','off','LineWidth',1.8,'FontSize',fs);
