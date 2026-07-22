@@ -22,6 +22,8 @@ import os
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
 def fmt_label(d):
     if not d: return ''
     ov = d.get('median_overlap', float('nan'))
@@ -31,7 +33,7 @@ def fmt_label(d):
 
 
 def main():
-    with open(f'{PATH}/filtered_results.json') as f:
+    with open(f'{DATA}/filtered_results.json') as f:
         F = json.load(f)
     nets = [('grid', '2D grid (n=800, deep barrier)'),
             ('pentapeptide', 'Pentapeptide MSM (n=250)')]
@@ -97,7 +99,7 @@ def main():
                  "Hatched/light = mathematical optimum (may have low overlap or coverage failure).   "
                  "Solid = valid-protocol best (overlap >= 0.05, coverage failure < 0.01, W>=2).",
                  fontsize=9.5)
-    fig.savefig(f'{PATH}/fig_final.png', dpi=170, bbox_inches='tight')
+    fig.savefig(f'{FIGURES}/fig_final.png', dpi=170, bbox_inches='tight')
     plt.close(fig)
     print('Saved fig_final.png')
 

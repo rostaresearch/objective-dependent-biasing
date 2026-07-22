@@ -230,10 +230,11 @@ def compute_diagnostics(C_all, V_state, A_set, B_set,
     so K^0 and K^b share support and the committor / current
     diagnostics are well-defined.
 
-    If `regularise` is True and (A,B) are disconnected in C_all,
-    a uniform Dirichlet pseudocount alpha_pseudo is added on visited
-    microstates (reversible regularisation, NOT artificial boundary
-    transitions). The 'regularised' flag is returned alongside.
+    If `regularise` is True and (A,B) are disconnected in C_all, an optional
+    sparse nearest-neighbour pseudocount is added only on the missing local links
+    required for connectivity (reversible regularisation, NOT artificial boundary
+    transitions); no pseudocount is added when the observed A-B graph is already
+    connected. The 'regularised' flag is returned alongside.
     """
     if not A_set or not B_set:
         return None

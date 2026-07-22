@@ -23,6 +23,8 @@ import analytic_lib as L
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
 
 
 def mfpt_and_grad(u: np.ndarray, K0: np.ndarray,
@@ -154,7 +156,7 @@ def main():
     print("\nUsing polynomial warm start from mfpt_results.json...")
     import json
     try:
-        with open(os.path.join(PATH, 'mfpt_results.json')) as f:
+        with open(os.path.join(DATA, 'mfpt_results.json')) as f:
             warm = np.asarray(json.load(f)['u_mfpt'])
     except Exception:
         warm = None
@@ -178,7 +180,7 @@ def main():
         mfpt_speedup_per_state=float(mfpt_0 / res['mfpt']),
         gap_speedup_per_state=float(res['gap'] / gap_0),
     )
-    with open(os.path.join(PATH, 'mfpt_per_state.json'),
+    with open(os.path.join(DATA, 'mfpt_per_state.json'),
               'w') as f:
         json.dump(save, f, indent=2)
     print('  Saved mfpt_per_state.json')

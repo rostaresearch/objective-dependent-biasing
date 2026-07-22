@@ -28,6 +28,8 @@ import os
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
 # ----------------------------------------------------------------------
 #  Spectral gap + analytic gradient
 # ----------------------------------------------------------------------
@@ -194,7 +196,7 @@ def main():
         u_polynomial=spec_poly['u'].tolist(),
         u_per_state=ps['u'].tolist(),
     )
-    with open(f'{PATH}/per_state_ceiling.json', 'w') as f:
+    with open(f'{DATA}/per_state_ceiling.json', 'w') as f:
         json.dump(save, f, indent=2)
     print(f"\nSaved per_state_ceiling.json")
 
@@ -240,7 +242,7 @@ def main():
 
     fig.suptitle('Per-state spectral-gap ceiling with analytic gradient '
                  fr'($|u|\leq {U_max}\,k_BT$, 2D grid, $n={n}$)', fontsize=11)
-    fig.savefig(f'{PATH}/fig_per_state_ceiling.png',
+    fig.savefig(f'{FIGURES}/fig_per_state_ceiling.png',
                 dpi=170, bbox_inches='tight')
     plt.close(fig)
     print('Saved fig_per_state_ceiling.png')

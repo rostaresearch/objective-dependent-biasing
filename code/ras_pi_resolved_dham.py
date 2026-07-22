@@ -25,6 +25,8 @@ import numpy as np
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
 
 sys.path.insert(0, PATH)
 from mechanism_audit_ras_proper import regularise_if_disconnected, KBT
@@ -32,7 +34,7 @@ from mechanism_audit_highd_n20 import (
     stationary_from_K, committor_K, positive_net_current, tilt_generator)
 from ras_pi_jensen_Rij import build_with_transitions, N_CV, N_F
 
-OUT = os.path.join(PATH, 'ras_pi_resolved_dham.json')
+OUT = os.path.join(DATA, 'ras_pi_resolved_dham.json')
 
 
 def edge_weights(tr_i, tr_j, tr_X, N, mode):
@@ -76,7 +78,7 @@ def diagnostics(C, V_state, A, B, W):
 
 
 def main():
-    d = np.load(os.path.join(PATH, 'pi_features.npz'),
+    d = np.load(os.path.join(DATA, 'pi_features.npz'),
                 allow_pickle=True)
     names = [str(x) for x in d['feature_names']]
     fi = names.index('Pi_Q61')

@@ -22,8 +22,10 @@ from scipy.io import loadmat, savemat
 
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # bundle root; override via MSM_ROOT
-MAT = f'{PATH}/grid_2d_data.mat'
-BAK = f'{PATH}/grid_2d_data_preOptionC.mat'
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
+MAT = f'{DATA}/grid_2d_data.mat'
+BAK = f'{DATA}/grid_2d_data_preOptionC.mat'
 
 shutil.copyfile(MAT, BAK)
 print(f'backed up -> {BAK}')
@@ -32,8 +34,8 @@ d = loadmat(MAT)
 nx, ny = int(np.asarray(d['nx']).ravel()[0]), int(np.asarray(d['ny']).ravel()[0])
 gap0 = float(np.asarray(d['gap0']).ravel()[0])
 
-head = json.load(open(f'{PATH}/polynomial_optionC_FINAL.json'))
-sw = json.load(open(f'{PATH}/optionC_sweeps_CORRECT.json'))
+head = json.load(open(f'{DATA}/polynomial_optionC_FINAL.json'))
+sw = json.load(open(f'{DATA}/optionC_sweeps_CORRECT.json'))
 
 u_C = np.asarray(head['spectral']['u'], float)
 sp_C = float(head['spectral']['speedup'])

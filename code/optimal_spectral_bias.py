@@ -36,6 +36,8 @@ import os
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
 # ---------- bias projection: symmetric, zero-mean ----------------------------
 
 def project_symmetric(u: np.ndarray, U_max: float = 4.0) -> np.ndarray:
@@ -260,7 +262,7 @@ def main():
         speedup_ps_sweep=[(b, v) for b, v in g_ps],
         flux_unb=flux_unb.tolist(), flux_poly=flux_poly.tolist(),
     )
-    with open(f'{PATH}/spectral_results.json', 'w') as f:
+    with open(f'{DATA}/spectral_results.json', 'w') as f:
         json.dump(save, f, indent=2)
     print(f'Saved spectral_results.json', flush=True)
 
@@ -327,7 +329,7 @@ def main():
     fig.suptitle('Optimal one-shot spectral preconditioning bias on the 2D grid '
                  r'$|u|\leq 3\,k_BT$ (symmetric budget, zero-mean), '
                  'edge-smoothness regularised', fontsize=11)
-    fig.savefig(f'{PATH}/fig_spectral_bias.png', dpi=170, bbox_inches='tight')
+    fig.savefig(f'{FIGURES}/fig_spectral_bias.png', dpi=170, bbox_inches='tight')
     plt.close(fig)
     print('Saved fig_spectral_bias.png')
 
@@ -344,7 +346,7 @@ def main():
     ax.set_title('Spectral-gap speedup vs symmetric bias budget')
     ax.grid(True, ls=':', alpha=0.4)
     ax.legend(fontsize=9)
-    fig2.savefig(f'{PATH}/fig_spectral_budget.png', dpi=170, bbox_inches='tight')
+    fig2.savefig(f'{FIGURES}/fig_spectral_budget.png', dpi=170, bbox_inches='tight')
     plt.close(fig2)
     print('Saved fig_spectral_budget.png')
 

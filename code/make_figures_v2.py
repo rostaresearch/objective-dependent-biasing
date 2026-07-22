@@ -20,6 +20,8 @@ import os
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
 def fig_landscape():
     net = make_grid_network()
     K0, pi0, A, B = net['K0'], net['pi0'], net['A'], net['B']
@@ -73,7 +75,7 @@ def fig_landscape():
 
 
 def fig_heatmap_WK():
-    with open(f'{PATH}/barrier_study.json') as f:
+    with open(f'{DATA}/barrier_study.json') as f:
         results = json.load(f)
     res_grid = results['grid']
     rows = [r for r in res_grid['rows'] if 'error' not in r]
@@ -115,13 +117,13 @@ def fig_heatmap_WK():
 
     fig.suptitle('2D grid (n=800): umbrella sampling speedup vs (W, κ)  '
                  r'[$N_{tot}=10^5$ lagtimes]', fontsize=11)
-    fig.savefig(f'{PATH}/fig_heatmap_WK.png', dpi=160, bbox_inches='tight')
+    fig.savefig(f'{FIGURES}/fig_heatmap_WK.png', dpi=160, bbox_inches='tight')
     plt.close(fig)
     print('Saved fig_heatmap_WK.png')
 
 
 def fig_best_per_cv():
-    with open(f'{PATH}/barrier_study.json') as f:
+    with open(f'{DATA}/barrier_study.json') as f:
         results = json.load(f)
 
     def best(rows, target):
@@ -169,7 +171,7 @@ def fig_best_per_cv():
                         fontsize=7, ha='center', color='#d62728')
     fig.suptitle('Best analytic speedup per CV: barrier-probability vs rate-relevance-weighted',
                  fontsize=11)
-    fig.savefig(f'{PATH}/fig_best_per_cv.png', dpi=160, bbox_inches='tight')
+    fig.savefig(f'{FIGURES}/fig_best_per_cv.png', dpi=160, bbox_inches='tight')
     plt.close(fig)
     print('Saved fig_best_per_cv.png')
 

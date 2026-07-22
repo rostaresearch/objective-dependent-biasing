@@ -13,15 +13,17 @@ from __future__ import annotations
 import os
 import sys, json, time
 import numpy as np
-sys.path.insert(0, PATH)
+PATH = os.environ.get('MSM_ROOT',
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repository root; override via MSM_ROOT
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
+sys.path.insert(0, os.path.join(PATH, 'code'))
 from scipy.optimize import minimize
 from scipy.io import loadmat
 import analytic_lib as L
 import optimal_spectral_bias as O
 from rerun_polynomial_optionC_lean import u_of, make_fg
 
-PATH = os.environ.get('MSM_ROOT',
-        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # bundle root; override via MSM_ROOT
 U = 3.0
 
 
@@ -47,9 +49,9 @@ def run(kind, K0, Fb, Uv, edges, A, B, seeds, maxiter=400, powell=False):
 
 def main():
     t0 = time.time()
-    head = json.load(open(f'{PATH}/polynomial_optionC_robust.json'))
-    lean = json.load(open(f'{PATH}/polynomial_optionC_lean.json'))
-    d = loadmat(f'{PATH}/grid_2d_data.mat')
+    head = json.load(open(f'{DATA}/polynomial_optionC_robust.json'))
+    lean = json.load(open(f'{DATA}/polynomial_optionC_lean.json'))
+    d = loadmat(f'{DATA}/grid_2d_data.mat')
 
     # --- reproduce the regime continuation chain, capturing theta at each barrier ---
     print('reproducing the regime continuation chain to recover its basin...')
@@ -118,7 +120,7 @@ def main():
                              theta=bm.x.tolist()),
                    note='consolidated best-found option C at barrier 4.0, U=3.0; '
                         'pooled seed bank incl. the regime continuation chain'),
-              open(f'{PATH}/polynomial_optionC_FINAL.json', 'w'), indent=2)
+              open(f'{DATA}/polynomial_optionC_FINAL.json', 'w'), indent=2)
     print(f'\nsaved polynomial_optionC_FINAL.json  [{time.time()-t0:.0f}s]')
 
 

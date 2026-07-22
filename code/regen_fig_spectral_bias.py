@@ -29,8 +29,10 @@ import os
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-d = loadmat(f"{PATH}/grid_2d_data.mat")
-j = json.load(open(f"{PATH}/spectral_results.json"))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
+d = loadmat(f"{DATA}/grid_2d_data.mat")
+j = json.load(open(f"{DATA}/spectral_results.json"))
 
 nx, ny = int(d["nx"].ravel()[0]), int(d["ny"].ravel()[0])   # 20 x 10
 U_max = float(d["U_max"].ravel()[0])                         # 3.0
@@ -108,8 +110,8 @@ plt.colorbar(c, ax=ax, label=r"$\log_{10}$ ratio")
 
 fig.suptitle(r"Optimal one-shot spectral preconditioning bias on the 2D grid "
              r"$|u|\leq 3\,k_BT$ (symmetric budget, zero-mean)", fontsize=11)
-fig.savefig(f"{PATH}/fig_spectral_bias.png", dpi=170, bbox_inches="tight")
-fig.savefig(f"{PATH}/fig_spectral_bias.pdf", bbox_inches="tight")
+fig.savefig(f"{FIGURES}/fig_spectral_bias.png", dpi=170, bbox_inches="tight")
+fig.savefig(f"{FIGURES}/fig_spectral_bias.pdf", bbox_inches="tight")
 plt.close(fig)
 print(f"Saved fig_spectral_bias.png/.pdf  (n={nx*ny}, "
       f"flat={sp_flat:.1f}x poly={sp_poly:.1f}x ceiling={sp_ps:.1f}x)")

@@ -19,11 +19,13 @@ import numpy as np
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
 
 sys.path.insert(0, PATH)
 from mechanism_audit_ras_proper import compute_diagnostics, bootstrap_audit, KBT
 
-NPZ = os.path.join(PATH, 'pi_features.npz')
+NPZ = os.path.join(DATA, 'pi_features.npz')
 
 
 def build(cvs, vbs, feats, feat_idx, n_cv, n_f, A_max=5.0, B_min=8.0, lag=1):
@@ -84,7 +86,7 @@ def main():
                 k: (float(v) if not isinstance(v, bool) else v) for k, v in r.items()})
         print()
 
-    with open(os.path.join(PATH, 'ras_pi_audit_point.json'), 'w') as f:
+    with open(os.path.join(DATA, 'ras_pi_audit_point.json'), 'w') as f:
         json.dump(out, f, indent=2)
     print("saved ras_pi_audit_point.json")
 

@@ -28,6 +28,8 @@ import os
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
 def asym_1d_generator(n: int = 200, A: float = 4.0, B: float = 1.0,
                        X_max: float = 2.0, base_rate: float = 1.0
                        ) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
@@ -134,7 +136,7 @@ def main():
                "zero-mean. Constant-shift gauge is undetermined; absolute "
                "u-values are the optimiser's report."),
     )
-    with open(f'{PATH}/asymmetric_1d.json', 'w') as f:
+    with open(f'{DATA}/asymmetric_1d.json', 'w') as f:
         json.dump(summary, f, indent=2)
     print(f"\nSaved asymmetric_1d.json")
 
@@ -155,7 +157,7 @@ def main():
         speedup_gap_mfpt=np.asarray([r['speedup_gap_mfpt'] for r in results]),
         speedup_mfpt_mfpt=np.asarray([r['speedup_mfpt_mfpt'] for r in results]),
     )
-    savemat(f'{PATH}/asymmetric_1d.mat', mat)
+    savemat(f'{DATA}/asymmetric_1d.mat', mat)
     print('Saved asymmetric_1d.mat')
 
 

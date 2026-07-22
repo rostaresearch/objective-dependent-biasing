@@ -9,6 +9,8 @@ import os
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
 # Re-build the 2D grid to recover (xs, ys) coordinates + F
 nx, ny = 20, 10
 K0, coords, F = L.grid_2d_generator(nx=nx, ny=ny, barrier_height=4.0,
@@ -21,9 +23,9 @@ ys1 = coords[:, 1].reshape(nx, ny)[0, :]
 Fgrid = F.reshape(nx, ny)
 pi0_grid = pi0.reshape(nx, ny)
 
-psc = json.load(open(f'{PATH}/per_state_ceiling.json'))
-mpst = json.load(open(f'{PATH}/mfpt_per_state.json'))
-sweep = json.load(open(f'{PATH}/sweep_results.json'))
+psc = json.load(open(f'{DATA}/per_state_ceiling.json'))
+mpst = json.load(open(f'{DATA}/mfpt_per_state.json'))
+sweep = json.load(open(f'{DATA}/sweep_results.json'))
 
 # Helper to extract a column from a list-of-dicts
 def col(rows, k):
@@ -70,7 +72,7 @@ out = dict(
     regime_mfpt_ps=col(sweep['barrier'], 'mfpt_speedup_per_state'),
     regime_mfpt_mfpt=col(sweep['barrier'], 'mfpt_speedup_mfpt_opt'),
 )
-savemat(f'{PATH}/grid_2d_data.mat', out)
+savemat(f'{DATA}/grid_2d_data.mat', out)
 print('Saved grid_2d_data.mat')
 print(f'  nx={nx} ny={ny} gap0={gap0:.3e}  U_max={psc["U_max"]}')
 print(f'  budget points: {len(out["budget_U"])}')

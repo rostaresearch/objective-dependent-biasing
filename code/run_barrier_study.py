@@ -23,6 +23,8 @@ import analytic_lib as L
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
 
 
 def _T_to_K(T: np.ndarray, tau: float = 1.0) -> np.ndarray:
@@ -68,7 +70,7 @@ def _mfpt_field(K, target):
 
 
 def make_pentapeptide_network():
-    T = np.load(os.path.join(PATH, 'pentapeptide_T.npy'))
+    T = np.load(os.path.join(DATA, 'pentapeptide_T.npy'))
     K0 = _T_to_K(T, tau=1.0)
     pi0 = L.stationary_distribution_from_K(K0)
     # define basins via slowest eigenvector extremes
@@ -217,7 +219,7 @@ def main():
                   f"  rate speedup {r['rate_speedup']:7.2f}x"
                   f"  barrier speedup {r['barrier_speedup']:7.2f}x")
 
-    with open(os.path.join(PATH, 'barrier_study.json'), 'w') as f:
+    with open(os.path.join(DATA, 'barrier_study.json'), 'w') as f:
         json.dump(out, f, indent=2, default=float)
     print('\nSaved barrier_study.json')
 

@@ -16,6 +16,8 @@ import numpy as np
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
 
 sys.path.insert(0, PATH)
 from mechanism_audit_ras_proper import bootstrap_audit, compute_diagnostics
@@ -97,7 +99,7 @@ def main():
     m_d = np.median([r['D_edge']['median'] for r in arows])
     print(f"  drift: Omega_J {100*do/m_o:.3f}%   D_edge {100*dd/m_d:.3f}%")
 
-    with open(os.path.join(PATH, 'ras_pi_audit.json'), 'w') as f:
+    with open(os.path.join(DATA, 'ras_pi_audit.json'), 'w') as f:
         json.dump(out, f, indent=2, default=float)
     print("\nsaved ras_pi_audit.json")
 

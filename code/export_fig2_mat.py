@@ -17,6 +17,8 @@ import os
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
 NAN = float('nan')
 
 
@@ -48,7 +50,7 @@ def pack(R):
 
 
 def main():
-    with open(f'{PATH}/filtered_results.json') as f:
+    with open(f'{DATA}/filtered_results.json') as f:
         F = json.load(f)
     out = dict(
         grid=pack(F['grid']),
@@ -56,7 +58,7 @@ def main():
         title_grid='2D grid (n=800, deep barrier)',
         title_penta='Pentapeptide MSM (n=250)',
     )
-    savemat(f'{PATH}/fig2_data.mat', out)
+    savemat(f'{DATA}/fig2_data.mat', out)
     for k in ('grid', 'penta'):
         d = out[k]
         print(f"{k}: cvs={list(d['cvs'])}")

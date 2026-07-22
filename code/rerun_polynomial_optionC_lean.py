@@ -9,7 +9,11 @@ from __future__ import annotations
 import os
 import sys, json, time
 import numpy as np
-sys.path.insert(0, PATH)
+PATH = os.environ.get('MSM_ROOT',
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repository root; override via MSM_ROOT
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
+sys.path.insert(0, os.path.join(PATH, 'code'))
 from scipy.optimize import minimize
 from scipy.io import loadmat
 import analytic_lib as L
@@ -17,8 +21,6 @@ import optimal_spectral_bias as O
 from per_state_ceiling import gap_and_grad
 from mfpt_per_state import mfpt_and_grad
 
-PATH = os.environ.get('MSM_ROOT',
-        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # bundle root; override via MSM_ROOT
 ALPHA = 0.001
 
 
@@ -74,7 +76,7 @@ def make_fg(kind, K0, Fb, U, edges, A=None, B=None):
 def seeds(Fb, U, pi0):
     ks = [np.clip(np.log(np.clip(pi0, 1e-300, None)) -
                   np.log(np.clip(pi0, 1e-300, None)).mean(), -U, U)]
-    d = loadmat(f'{PATH}/grid_2d_data.mat')
+    d = loadmat(f'{DATA}/grid_2d_data.mat')
     for key in ('u_ps_spec', 'u_poly_spec', 'u_ps_mfpt'):
         if key in d:
             ks.append(np.asarray(d[key], float).ravel(order='C'))
@@ -147,7 +149,7 @@ def main():
 
     out['ceilings'] = dict(gamma=91.30, mfpt=85.14)
     out['shipped_clipbased'] = dict(spectral_poly=68.98, mfpt_poly=82.13)
-    with open(f'{PATH}/polynomial_optionC_lean.json', 'w') as f:
+    with open(f'{DATA}/polynomial_optionC_lean.json', 'w') as f:
         json.dump(out, f, indent=2)
     print(f'\nspectral: 68.98 -> {sp_g:.2f}  ({100*sp_g/91.30:.1f}% of ceiling)')
     print(f'mfpt:     82.13 -> {sp_m:.2f}  ({100*sp_m/85.14:.1f}% of ceiling)')

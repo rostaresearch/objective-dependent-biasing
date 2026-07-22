@@ -17,6 +17,8 @@ import os
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
 nx, ny = 40, 20
 barrier_height = 4.0
 U_max = 3.0
@@ -54,7 +56,7 @@ gap_ps_mfpt = L.spectral_gap_K(L.tilt_generator(K0, ps_mfpt['u']))
 mfpt_ps_mfpt = ps_mfpt['mfpt']
 print(f"  MFPT speedup = {mfpt0/mfpt_ps_mfpt:.2f}x")
 
-savemat(f'{PATH}/grid_2d_hires.mat', dict(
+savemat(f'{DATA}/grid_2d_hires.mat', dict(
     nx=nx, ny=ny,
     xs=xs1, ys=ys1,
     F=Fgrid, pi0=pi0_grid,

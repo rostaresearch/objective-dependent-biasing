@@ -25,6 +25,8 @@ import os
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
 kBT = 0.5981   # kcal/mol -- matches the DHAM2D config
 
 # ----------------------------------------------------------------------
@@ -172,5 +174,5 @@ for k, r in enumerate(results, start=1):
     out[f'speedup_mfpt_spec_{k}'] = r['speedup_mfpt_spec']
     out[f'speedup_gap_mfpt_{k}'] = r['speedup_gap_mfpt']
     out[f'speedup_mfpt_mfpt_{k}'] = r['speedup_mfpt_mfpt']
-savemat(f'{PATH}/rkhs_2d_data.mat', out)
+savemat(f'{DATA}/rkhs_2d_data.mat', out)
 print('\nSaved rkhs_2d_data.mat')

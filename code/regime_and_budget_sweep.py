@@ -30,6 +30,8 @@ import os
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
 def _optimise_per_state_quick(K0, U_max, warm_u, kind, A_set=None, B_set=None,
                                 maxiter=200):
     """One restart only (warm-started from poly), short maxiter."""
@@ -207,7 +209,7 @@ def main():
     barrier_rows = sweep_barrier()
     budget_rows = sweep_budget()
 
-    with open(f'{PATH}/sweep_results.json', 'w') as f:
+    with open(f'{DATA}/sweep_results.json', 'w') as f:
         json.dump(dict(barrier=barrier_rows, budget=budget_rows), f, indent=2)
     print(f"\nTotal time: {time.time()-t_start:.0f}s.  Saved sweep_results.json")
 
@@ -215,12 +217,12 @@ def main():
                r'barrier height parameter [$k_BT$]',
                r'Regime sweep: 2D grid, varying barrier height '
                r'(at $U_{\max}=3\,k_BT$)',
-               f'{PATH}/fig_regime_sweep.png')
+               f'{FIGURES}/fig_regime_sweep.png')
     plot_sweep(budget_rows, 'U_max',
                r'symmetric bias budget $U_{\max}$ [$k_BT$]',
                r'Budget sweep: 2D grid, fixed barrier (4 $k_BT$ amplitude, '
                r'FE range $\approx 12\,k_BT$)',
-               f'{PATH}/fig_budget_sweep.png')
+               f'{FIGURES}/fig_budget_sweep.png')
 
 
 if __name__ == '__main__':

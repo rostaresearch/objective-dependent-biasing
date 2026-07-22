@@ -37,6 +37,8 @@ import os
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
 def gap_objective(u, K0, beta=1.0):
     """Returns -|lambda_2| (so that minimize gives maximum |lambda_2|).
        Robust to bad u (returns large value)."""
@@ -222,7 +224,7 @@ def main():
 
     fig.suptitle('Optimal single-shot bias for fastest equilibration on the 2D grid '
                  '(n=200, FE range 8 kBT, deep barrier)', fontsize=11)
-    fig.savefig(f'{PATH}/fig_optimal_bias.png', dpi=170, bbox_inches='tight')
+    fig.savefig(f'{FIGURES}/fig_optimal_bias.png', dpi=170, bbox_inches='tight')
     plt.close(fig)
     print(f'\nSaved fig_optimal_bias.png')
 

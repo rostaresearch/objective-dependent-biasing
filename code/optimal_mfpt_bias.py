@@ -33,6 +33,8 @@ import os
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
 def mfpt_obj(u, K0, A, B):
     """Returns MFPT(A->B); returns large if biased operator pathological."""
     if not np.all(np.isfinite(u)):
@@ -140,7 +142,7 @@ def main():
                 u_spectral=spec['u'].tolist(),
                 u_mfpt=mfpt_opt['u'].tolist(),
                 table=table)
-    with open(f'{PATH}/mfpt_results.json', 'w') as f:
+    with open(f'{DATA}/mfpt_results.json', 'w') as f:
         json.dump(save, f, indent=2)
     print('  Saved mfpt_results.json')
 
@@ -221,7 +223,7 @@ def main():
                  r'($|u|\leq 3\,k_BT$, symmetric, zero-mean).  '
                  r'The MFPT-optimal bias and the spectral-$\gamma$ optimal '
                  r'bias are distinct.', fontsize=10.5)
-    fig.savefig(f'{PATH}/fig_mfpt_vs_spectral.png',
+    fig.savefig(f'{FIGURES}/fig_mfpt_vs_spectral.png',
                 dpi=170, bbox_inches='tight')
     plt.close(fig)
     print('Saved fig_mfpt_vs_spectral.png')

@@ -45,6 +45,8 @@ import numpy as np
 # Bundle root: override with the MSM_ROOT environment variable.
 PATH = os.environ.get('MSM_ROOT',
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
 
 sys.path.insert(0, PATH)
 from mechanism_audit_ras_proper import (
@@ -52,8 +54,8 @@ from mechanism_audit_ras_proper import (
 from mechanism_audit_highd_n20 import (
     stationary_from_K, committor_K, positive_net_current)
 
-NPZ = os.path.join(PATH, 'pi_features.npz')
-OUT = os.path.join(PATH, 'ras_pi_jensen_Rij.json')
+NPZ = os.path.join(DATA, 'pi_features.npz')
+OUT = os.path.join(DATA, 'ras_pi_jensen_Rij.json')
 
 N_CV, N_F = 12, 8
 A_MAX, B_MIN, LAG = 5.0, 8.0, 1

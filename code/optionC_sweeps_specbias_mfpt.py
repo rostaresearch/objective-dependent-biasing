@@ -18,14 +18,16 @@ from __future__ import annotations
 import os
 import sys, json, time
 import numpy as np
-sys.path.insert(0, PATH)
+PATH = os.environ.get('MSM_ROOT',
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # repository root; override via MSM_ROOT
+DATA = os.path.join(PATH, 'data')
+FIGURES = os.path.join(PATH, 'figures')
+sys.path.insert(0, os.path.join(PATH, 'code'))
 from scipy.optimize import minimize
 import analytic_lib as L
 import optimal_spectral_bias as O
 from rerun_polynomial_optionC_lean import u_of, make_fg
 
-PATH = os.environ.get('MSM_ROOT',
-        os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # bundle root; override via MSM_ROOT
 
 
 def opt_gap(K0, Fb, U, edges, A, B, seeds, maxiter=300):
@@ -45,9 +47,9 @@ def opt_gap(K0, Fb, U, edges, A, B, seeds, maxiter=300):
 
 def main():
     t0 = time.time()
-    fin = json.load(open(f'{PATH}/polynomial_optionC_FINAL.json'))
+    fin = json.load(open(f'{DATA}/polynomial_optionC_FINAL.json'))
     TG = np.asarray(fin['spectral']['theta'], float)
-    rs = json.load(open(f'{PATH}/optionC_sweeps_RESEEDED.json'))
+    rs = json.load(open(f'{DATA}/optionC_sweeps_RESEEDED.json'))
     out = dict(note='option C: gap AND mfpt of the SPECTRAL-optimal polynomial (poly_spec)')
 
     # ---- budget sweep, barrier 4.0 ----
@@ -113,7 +115,7 @@ def main():
     print(f'option C          mfpt_poly              : {[round(x,2) for x in M]}')
     print('  (does the cross-objective collapse survive? '
           f"{'YES' if M[-1] < M[i3] else 'NO -- check!'})")
-    json.dump(out, open(f'{PATH}/optionC_sweeps_CORRECT.json', 'w'), indent=2)
+    json.dump(out, open(f'{DATA}/optionC_sweeps_CORRECT.json', 'w'), indent=2)
     print(f'\nsaved optionC_sweeps_CORRECT.json  [{time.time()-t0:.0f}s]')
 
 
