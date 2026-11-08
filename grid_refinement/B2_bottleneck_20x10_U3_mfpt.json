@@ -1,0 +1,101 @@
+{
+ "job": "bottleneck_20x10_U3_mfpt",
+ "system": "bottleneck",
+ "grid": "20x10",
+ "n": 200,
+ "U": 3.0,
+ "objective": "mfpt",
+ "best_start": "interp_coarse_other",
+ "best_value": 86.8239032211681,
+ "value_spread_rel": 5.365248512010568e-13,
+ "stationarity": {
+  "proj_grad_rel": 1.4561501979902934e-08
+ },
+ "seconds": 89.41381573677063,
+ "runs": [
+  {
+   "start": "interp_coarse",
+   "fun": 86.82390322118104,
+   "nit": 20,
+   "nfev": 23,
+   "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+   "success": true,
+   "proj_grad_inf": 3.099269840916532e-06,
+   "proj_grad_rel": 3.569604366923293e-08,
+   "seconds": 0.2852311134338379,
+   "value": 86.82390322118104
+  },
+  {
+   "start": "interp_coarse_other",
+   "fun": 86.8239032211681,
+   "nit": 354,
+   "nfev": 373,
+   "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+   "success": true,
+   "proj_grad_inf": 1.2642864386579399e-06,
+   "proj_grad_rel": 1.4561501979902934e-08,
+   "seconds": 12.463494300842285,
+   "value": 86.8239032211681
+  },
+  {
+   "start": "flatten",
+   "fun": 86.82390322119763,
+   "nit": 148,
+   "nfev": 155,
+   "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+   "success": true,
+   "proj_grad_inf": 1.9134591630791507e-06,
+   "proj_grad_rel": 2.2038391411686607e-08,
+   "seconds": 6.148678302764893,
+   "value": 86.82390322119763
+  },
+  {
+   "start": "zeros",
+   "fun": 86.82390322120398,
+   "nit": 222,
+   "nfev": 233,
+   "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+   "success": true,
+   "proj_grad_inf": 4.979231650922141e-07,
+   "proj_grad_rel": 5.734862711984276e-09,
+   "seconds": 11.362407207489014,
+   "value": 86.82390322120398
+  },
+  {
+   "start": "random0",
+   "fun": 86.82390322119552,
+   "nit": 292,
+   "nfev": 306,
+   "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+   "success": true,
+   "proj_grad_inf": 3.7012860975166925e-06,
+   "proj_grad_rel": 4.262980538996468e-08,
+   "seconds": 16.25010585784912,
+   "value": 86.82390322119552
+  },
+  {
+   "start": "random1",
+   "fun": 86.82390322121468,
+   "nit": 402,
+   "nfev": 448,
+   "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+   "success": true,
+   "proj_grad_inf": 7.08975728347383e-07,
+   "proj_grad_rel": 8.165674451896224e-09,
+   "seconds": 24.54436469078064,
+   "value": 86.82390322121468
+  },
+  {
+   "start": "random2",
+   "fun": 86.82390322118135,
+   "nit": 361,
+   "nfev": 378,
+   "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+   "success": true,
+   "proj_grad_inf": 3.424209719703759e-07,
+   "proj_grad_rel": 3.943856003548568e-09,
+   "seconds": 18.34716796875,
+   "value": 86.82390322118135
+  }
+ ]
+}

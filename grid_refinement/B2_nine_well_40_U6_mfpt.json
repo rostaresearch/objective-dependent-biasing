@@ -1,0 +1,108 @@
+{
+ "job": "nine_well_40_U6_mfpt",
+ "merged_from": [
+  "B2_nine_well_40_U6_mfpt_part1.json",
+  "B2_nine_well_40_U6_mfpt_part2.json",
+  "B2_nine_well_40_U6_mfpt_part3.json"
+ ],
+ "maxiter": 6000,
+ "ftol": 1e-12,
+ "system": "nine_well",
+ "grid": "40",
+ "n": 1600,
+ "U": 6.0,
+ "objective": "mfpt",
+ "best_start": "interp_coarse",
+ "best_value": 837.3710626686182,
+ "value_spread_rel": 1.4517419656547948e-05,
+ "stationarity": {
+  "proj_grad_rel": 2.4090251318084794e-08
+ },
+ "seconds": 13322.600374937057,
+ "runs": [
+  {
+   "start": "interp_coarse",
+   "fun": 837.3710626686182,
+   "nit": 6000,
+   "nfev": 6183,
+   "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+   "success": false,
+   "proj_grad_inf": 2.0172479346178743e-05,
+   "proj_grad_rel": 2.4090251318084794e-08,
+   "seconds": 2082.513171195984,
+   "value": 837.3710626686182
+  },
+  {
+   "start": "flatten",
+   "fun": 837.3710767249438,
+   "nit": 6000,
+   "nfev": 6196,
+   "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+   "success": false,
+   "proj_grad_inf": 0.0001457737695677022,
+   "proj_grad_rel": 1.740850306626788e-07,
+   "seconds": 1920.473611831665,
+   "value": 837.3710767249438
+  },
+  {
+   "start": "random0",
+   "fun": 837.3712343841528,
+   "nit": 6000,
+   "nfev": 6193,
+   "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+   "success": false,
+   "proj_grad_inf": 8.503445762972194e-05,
+   "proj_grad_rel": 1.0154929395474254e-07,
+   "seconds": 1314.4221246242523,
+   "value": 837.3712343841528
+  },
+  {
+   "start": "interp_coarse_other",
+   "fun": 837.3832191357432,
+   "nit": 6000,
+   "nfev": 6230,
+   "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+   "success": false,
+   "proj_grad_inf": 0.00023748662094088716,
+   "proj_grad_rel": 2.836056604836138e-07,
+   "seconds": 2087.4687955379486,
+   "value": 837.3832191357432
+  },
+  {
+   "start": "zeros",
+   "fun": 837.3710808158726,
+   "nit": 6000,
+   "nfev": 6182,
+   "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+   "success": false,
+   "proj_grad_inf": 3.8838451132505725e-05,
+   "proj_grad_rel": 4.638140965492193e-08,
+   "seconds": 1919.6192569732666,
+   "value": 837.3710808158726
+  },
+  {
+   "start": "random1",
+   "fun": 837.3712766074939,
+   "nit": 6000,
+   "nfev": 6186,
+   "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+   "success": false,
+   "proj_grad_inf": 4.280304400306941e-05,
+   "proj_grad_rel": 5.111596874504777e-08,
+   "seconds": 2080.9447083473206,
+   "value": 837.3712766074939
+  },
+  {
+   "start": "random2",
+   "fun": 837.3710990859734,
+   "nit": 6000,
+   "nfev": 6171,
+   "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+   "success": false,
+   "proj_grad_inf": 4.206972735217637e-05,
+   "proj_grad_rel": 5.0240242824355046e-08,
+   "seconds": 1916.5240685939789,
+   "value": 837.3710990859734
+  }
+ ]
+}

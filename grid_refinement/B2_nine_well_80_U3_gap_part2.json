@@ -1,0 +1,49 @@
+{
+ "job": "nine_well_80_U3_gap_part2",
+ "maxiter": 20000,
+ "ftol": 1e-13,
+ "system": "nine_well",
+ "grid": "80",
+ "n": 6400,
+ "U": 3.0,
+ "objective": "gap",
+ "best_start": "interp_coarse",
+ "best_value": 0.006368419233630116,
+ "value_spread_rel": 0.0,
+ "stationarity": {
+  "cluster_size": 1,
+  "lams": [
+   -8.218247008048081e-17,
+   -0.006368419233630116,
+   -0.007036589936156328,
+   -0.00827308632532755,
+   -0.010162306571991069,
+   -0.016351483135978794,
+   -0.020520436261651752
+  ],
+  "rel_sep_l2_l3": 0.10491939648033223,
+  "lam3_over_lam2": 1.1049193964803323,
+  "single_eigvec_proj_grad_rel": 4.846440635312419e-07,
+  "clarke_proj_grad_rel": 4.846440635312419e-07,
+  "clarke_Y": null
+ },
+ "seconds": 381.77669739723206,
+ "runs": [
+  {
+   "start": "interp_coarse",
+   "fun": -0.006368217934410154,
+   "nit": 314,
+   "nfev": 432,
+   "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+   "success": true,
+   "proj_grad_inf": 1.248198010271942e-08,
+   "proj_grad_rel": 1.9600428614846975e-06,
+   "seconds": 45.87887501716614,
+   "stage1_gamma": 0.006368217934410154,
+   "stage1_rel_sep": 1.6663083733555286e-06,
+   "value": 0.006368419233630116,
+   "stage2_gamma": 0.006368419233630116,
+   "stage2_seconds": 335.6964695453644
+  }
+ ]
+}

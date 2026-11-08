@@ -1,0 +1,303 @@
+{
+ "description": "Network MFPT predictions on cell-centred grids aligned with the A and B squares.\n\nThe vertex grids of grid_sensitivity.py (nodes at linspace(0, 2pi, n)) represent A and B by the\ncells whose centres fall inside each square; the covered area then changes irregularly with n, and\nsome biased MFPTs (spectral) are sensitive to it. Here the domain [0, 2pi]^2 is divided into n x n\ncells of side h = 2pi/n with nodes at cell centres. All square edges lie at half-integer multiples\nof the 20 x 20 spacing 2pi/19, so for n a multiple of 38 the squares are exact unions of cells and the\nno-flux outer faces coincide with the reflecting walls at 0 and 2pi used in the Langevin runs.\n\nSQRA and Scharfetter-Gummel generators as in network_predictions.py; k0 = D/h^2. Source: uniform\nover the A cells, which for these grids is exactly the uniform distribution on the A square in the\nlimit. Solver: SuperLU (spsolve).\n",
+ "D": 1.0,
+ "rows": [
+  {
+   "n": 114,
+   "h": 0.05511566058929462,
+   "case": "unbiased",
+   "interp": "none",
+   "n_A": 36,
+   "n_B": 36,
+   "mfpt_sqra": 721660.003528019,
+   "mfpt_sg": 722820.360343614,
+   "seconds": 4.511279106140137
+  },
+  {
+   "n": 114,
+   "h": 0.05511566058929462,
+   "case": "MFPT_U3",
+   "interp": "bilinear",
+   "n_A": 36,
+   "n_B": 36,
+   "mfpt_sqra": 2014.6602522149692,
+   "mfpt_sg": 2017.717758858299,
+   "seconds": 4.257467746734619
+  },
+  {
+   "n": 114,
+   "h": 0.05511566058929462,
+   "case": "MFPT_U3",
+   "interp": "bicubic",
+   "n_A": 36,
+   "n_B": 36,
+   "mfpt_sqra": 2036.8010730178694,
+   "mfpt_sg": 2039.9051259726257,
+   "seconds": 4.323502779006958
+  },
+  {
+   "n": 114,
+   "h": 0.05511566058929462,
+   "case": "spectral_U3",
+   "interp": "bilinear",
+   "n_A": 36,
+   "n_B": 36,
+   "mfpt_sqra": 13493.754152630761,
+   "mfpt_sg": 13501.912586288601,
+   "seconds": 4.153002977371216
+  },
+  {
+   "n": 114,
+   "h": 0.05511566058929462,
+   "case": "spectral_U3",
+   "interp": "bicubic",
+   "n_A": 36,
+   "n_B": 36,
+   "mfpt_sqra": 13944.961116909772,
+   "mfpt_sg": 13953.668794601259,
+   "seconds": 4.174861192703247
+  },
+  {
+   "n": 114,
+   "h": 0.05511566058929462,
+   "case": "MFPT_U6",
+   "interp": "bilinear",
+   "n_A": 36,
+   "n_B": 36,
+   "mfpt_sqra": 23.21096417658888,
+   "mfpt_sg": 23.23018806729914,
+   "seconds": 4.09692120552063
+  },
+  {
+   "n": 114,
+   "h": 0.05511566058929462,
+   "case": "MFPT_U6",
+   "interp": "bicubic",
+   "n_A": 36,
+   "n_B": 36,
+   "mfpt_sqra": 22.43744477426034,
+   "mfpt_sg": 22.456442873536147,
+   "seconds": 4.053536653518677
+  },
+  {
+   "n": 114,
+   "h": 0.05511566058929462,
+   "case": "spectral_U6",
+   "interp": "bilinear",
+   "n_A": 36,
+   "n_B": 36,
+   "mfpt_sqra": 158958.76114644803,
+   "mfpt_sg": 159081.1064286701,
+   "seconds": 4.316637992858887
+  },
+  {
+   "n": 114,
+   "h": 0.05511566058929462,
+   "case": "spectral_U6",
+   "interp": "bicubic",
+   "n_A": 36,
+   "n_B": 36,
+   "mfpt_sqra": 192364.88583661342,
+   "mfpt_sg": 192553.03585726285,
+   "seconds": 4.523870229721069
+  },
+  {
+   "n": 228,
+   "h": 0.02755783029464731,
+   "case": "unbiased",
+   "interp": "none",
+   "n_A": 144,
+   "n_B": 144,
+   "mfpt_sqra": 723802.4938525005,
+   "mfpt_sg": 724093.186380322,
+   "seconds": 34.330260276794434
+  },
+  {
+   "n": 228,
+   "h": 0.02755783029464731,
+   "case": "MFPT_U3",
+   "interp": "bilinear",
+   "n_A": 144,
+   "n_B": 144,
+   "mfpt_sqra": 2020.0582301239394,
+   "mfpt_sg": 2020.8251042355364,
+   "seconds": 40.70238542556763
+  },
+  {
+   "n": 228,
+   "h": 0.02755783029464731,
+   "case": "MFPT_U3",
+   "interp": "bicubic",
+   "n_A": 144,
+   "n_B": 144,
+   "mfpt_sqra": 2042.39177780052,
+   "mfpt_sg": 2043.1697018611071,
+   "seconds": 42.99899864196777
+  },
+  {
+   "n": 228,
+   "h": 0.02755783029464731,
+   "case": "spectral_U3",
+   "interp": "bilinear",
+   "n_A": 144,
+   "n_B": 144,
+   "mfpt_sqra": 13266.45784709238,
+   "mfpt_sg": 13268.622565868889,
+   "seconds": 43.66672325134277
+  },
+  {
+   "n": 228,
+   "h": 0.02755783029464731,
+   "case": "spectral_U3",
+   "interp": "bicubic",
+   "n_A": 144,
+   "n_B": 144,
+   "mfpt_sqra": 13663.71770687801,
+   "mfpt_sg": 13665.83369807057,
+   "seconds": 41.62318992614746
+  },
+  {
+   "n": 228,
+   "h": 0.02755783029464731,
+   "case": "MFPT_U6",
+   "interp": "bilinear",
+   "n_A": 144,
+   "n_B": 144,
+   "mfpt_sqra": 23.221380788300902,
+   "mfpt_sg": 23.226303297799323,
+   "seconds": 40.22676205635071
+  },
+  {
+   "n": 228,
+   "h": 0.02755783029464731,
+   "case": "MFPT_U6",
+   "interp": "bicubic",
+   "n_A": 144,
+   "n_B": 144,
+   "mfpt_sqra": 22.456576379374606,
+   "mfpt_sg": 22.461344063841995,
+   "seconds": 40.70276188850403
+  },
+  {
+   "n": 228,
+   "h": 0.02755783029464731,
+   "case": "spectral_U6",
+   "interp": "bilinear",
+   "n_A": 144,
+   "n_B": 144,
+   "mfpt_sqra": 149760.54300380213,
+   "mfpt_sg": 149790.2038269644,
+   "seconds": 38.094605445861816
+  },
+  {
+   "n": 228,
+   "h": 0.02755783029464731,
+   "case": "spectral_U6",
+   "interp": "bicubic",
+   "n_A": 144,
+   "n_B": 144,
+   "mfpt_sqra": 179312.76619499878,
+   "mfpt_sg": 179356.26889574146,
+   "seconds": 37.33633756637573
+  },
+  {
+   "n": 456,
+   "h": 0.013778915147323654,
+   "case": "unbiased",
+   "interp": "none",
+   "n_A": 576,
+   "n_B": 576,
+   "mfpt_sqra": 724305.70896197,
+   "mfpt_sg": 724378.4812147296,
+   "seconds": 282.14812898635864
+  },
+  {
+   "n": 456,
+   "h": 0.013778915147323654,
+   "case": "MFPT_U3",
+   "interp": "bilinear",
+   "n_A": 576,
+   "n_B": 576,
+   "mfpt_sqra": 2021.3231012115987,
+   "mfpt_sg": 2021.5150154439802,
+   "seconds": 284.6267125606537
+  },
+  {
+   "n": 456,
+   "h": 0.013778915147323654,
+   "case": "MFPT_U3",
+   "interp": "bicubic",
+   "n_A": 576,
+   "n_B": 576,
+   "mfpt_sqra": 2043.7016924810978,
+   "mfpt_sg": 2043.8962792079976,
+   "seconds": 306.3660900592804
+  },
+  {
+   "n": 456,
+   "h": 0.013778915147323654,
+   "case": "spectral_U3",
+   "interp": "bilinear",
+   "n_A": 576,
+   "n_B": 576,
+   "mfpt_sqra": 13147.546605843536,
+   "mfpt_sg": 13148.105096751242,
+   "seconds": 288.18112206459045
+  },
+  {
+   "n": 456,
+   "h": 0.013778915147323654,
+   "case": "spectral_U3",
+   "interp": "bicubic",
+   "n_A": 576,
+   "n_B": 576,
+   "mfpt_sqra": 13516.437997722433,
+   "mfpt_sg": 13516.958734697218,
+   "seconds": 268.611629486084
+  },
+  {
+   "n": 456,
+   "h": 0.013778915147323654,
+   "case": "MFPT_U6",
+   "interp": "bilinear",
+   "n_A": 576,
+   "n_B": 576,
+   "mfpt_sqra": 23.222350014110983,
+   "mfpt_sg": 23.22359543039983,
+   "seconds": 258.24684953689575
+  },
+  {
+   "n": 456,
+   "h": 0.013778915147323654,
+   "case": "MFPT_U6",
+   "interp": "bicubic",
+   "n_A": 576,
+   "n_B": 576,
+   "mfpt_sqra": 22.459623665503756,
+   "mfpt_sg": 22.460816520110782,
+   "seconds": 236.444682598114
+  },
+  {
+   "n": 456,
+   "h": 0.013778915147323654,
+   "case": "spectral_U6",
+   "interp": "bilinear",
+   "n_A": 576,
+   "n_B": 576,
+   "mfpt_sqra": 145208.94852256676,
+   "mfpt_sg": 145216.28771140723,
+   "seconds": 202.5376672744751
+  },
+  {
+   "n": 456,
+   "h": 0.013778915147323654,
+   "case": "spectral_U6",
+   "interp": "bicubic",
+   "n_A": 576,
+   "n_B": 576,
+   "mfpt_sqra": 172903.67457208375,
+   "mfpt_sg": 172914.11991388188,
+   "seconds": 184.08157467842102
+  }
+ ]
+}

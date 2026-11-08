@@ -1,0 +1,13 @@
+[
+ {"case": "spectral_U6", "interp": "bilinear", "dt": 4e-4, "nwalk": 400, "seed": 21, "expected": 140750, "lanes": 56},
+ {"case": "spectral_U6", "interp": "bilinear", "dt": 2e-4, "nwalk": 200, "seed": 22, "expected": 140750, "lanes": 56},
+ {"case": "spectral_U6", "interp": "bicubic", "dt": 4e-4, "nwalk": 300, "seed": 21, "expected": 166720, "lanes": 56},
+ {"case": "spectral_U3", "interp": "bilinear", "dt": 4e-4, "nwalk": 1000, "seed": 21, "expected": 13017, "lanes": 56},
+ {"case": "spectral_U3", "interp": "bilinear", "dt": 2e-4, "nwalk": 1000, "seed": 22, "expected": 13017, "lanes": 56},
+ {"case": "MFPT_U3", "interp": "bilinear", "dt": 4e-4, "nwalk": 2000, "seed": 21, "expected": 2022, "lanes": 56},
+ {"case": "MFPT_U3", "interp": "bilinear", "dt": 2e-4, "nwalk": 2000, "seed": 22, "expected": 2022, "lanes": 56},
+ {"case": "MFPT_U3", "interp": "bilinear", "dt": 1e-4, "nwalk": 1000, "seed": 23, "expected": 2022, "lanes": 56},
+ {"case": "MFPT_U3", "interp": "bicubic", "dt": 4e-4, "nwalk": 1000, "seed": 21, "expected": 2044, "lanes": 56},
+ {"case": "MFPT_U3", "interp": "bicubic", "dt": 2e-4, "nwalk": 1000, "seed": 22, "expected": 2044, "lanes": 56},
+ {"case": "spectral_U3", "interp": "bicubic", "dt": 4e-4, "nwalk": 700, "seed": 21, "expected": 13355, "lanes": 56}
+]

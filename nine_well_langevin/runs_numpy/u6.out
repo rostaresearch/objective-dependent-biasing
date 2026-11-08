@@ -1,0 +1,1 @@
+{'case': 'MFPT_U6', 'dt': 0.0004, 'nwalk': 5000, 'seed': 101, 'n_completed': 5000, 'n_censored': 0, 'mean_completed': 23.377326319999998, 'mle_with_censoring': 23.377326319999998, 'ci95_bootstrap': [22.820138402000005, 23.949742154], 'network_continuum': 23.22, 'ratio': 1.0067754659776056, 'wall_s': 1635.1639194488525}

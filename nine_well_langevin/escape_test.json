@@ -1,0 +1,83 @@
+{
+ "description": "Precise Langevin-versus-network test on sub-problems of the unbiased A -> B transition.\n\nThe unbiased A -> B MFPT (~7e5) only allows a few dozen transitions per day. Here the same unbiased\ndynamics start in A but stop at intermediate squares on the route to B (half-width 2pi/38, centred\non coarse nodes, so the aligned grids cover them exactly). Their MFPTs are short enough for\nthousands of walkers, so a few-percent difference between Langevin and the network would show.\n\nUsage: python escape_test.py network        (network MFPTs, aligned grids 228 and 456, extrapolated)\n       python escape_test.py langevin DT N  (Langevin, numba kernel, out_dir runs_escape)\n",
+ "network": {
+  "node_11_12": {
+   "centre": [
+    3.6376335988934447,
+    3.968327562429212
+   ],
+   "half_width": 0.16534698176788384,
+   "network_n114_228_456": [
+    540.2356087810683,
+    525.8659112591671,
+    518.5628155538307
+   ],
+   "order": 0.9764496518039333,
+   "network_continuum": 511.01531135509674
+  },
+  "node_8_9": {
+   "centre": [
+    2.6455517082861415,
+    2.9762456718219092
+   ],
+   "half_width": 0.16534698176788384,
+   "network_n114_228_456": [
+    6905.357698608292,
+    6444.664455918053,
+    6218.974632937014
+   ],
+   "order": 1.0294650724537178,
+   "network_continuum": 6002.22929254902
+  },
+  "node_6_6": {
+   "centre": [
+    1.984163781214606,
+    1.984163781214606
+   ],
+   "half_width": 0.16534698176788384,
+   "network_n114_228_456": [
+    556970.9727080242,
+    528228.1143897234,
+    513402.79095055535
+   ],
+   "order": 0.9551399570582485,
+   "network_continuum": 497610.46731100854
+  }
+ },
+ "langevin": [
+  {
+   "target": "node_11_12",
+   "dt": 0.0004,
+   "n": 3000,
+   "mean": 514.5255630666667,
+   "ci95": [
+    495.69540586666676,
+    533.3623998566666
+   ],
+   "network": 511.01531135509674,
+   "ratio": 1.006869171301857,
+   "ratio_ci95": [
+    0.9700206527123325,
+    1.0437307611044186
+   ],
+   "cv": 1.0209084891763085
+  },
+  {
+   "target": "node_8_9",
+   "dt": 0.0004,
+   "n": 500,
+   "mean": 6343.6607968,
+   "ci95": [
+    5839.393290620001,
+    6867.37902408
+   ],
+   "network": 6002.22929254902,
+   "ratio": 1.0568841154860282,
+   "ratio_ci95": [
+    0.9728707461857282,
+    1.1441380676018076
+   ],
+   "cv": 0.9237374545525006
+  }
+ ]
+}

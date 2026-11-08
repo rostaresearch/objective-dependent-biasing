@@ -1,0 +1,4 @@
+[
+ {"case": "spectral_U6", "interp": "bilinear", "dt": 4e-4, "nwalk": 100, "seed": 1, "expected": 140750},
+ {"case": "spectral_U6", "interp": "bicubic", "dt": 4e-4, "nwalk": 100, "seed": 1, "expected": 166720}
+]

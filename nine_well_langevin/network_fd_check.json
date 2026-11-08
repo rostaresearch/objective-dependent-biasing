@@ -1,0 +1,95 @@
+{
+ "description": "Third discretization of the continuum A -> B MFPT: central finite differences of the backward\nKolmogorov equation\n\n    D Lap t - D grad(F + b) . grad t = -1  outside B,  t = 0 in B,  no-flux at the outer walls,\n\non the aligned cell-centred grids of network_aligned.py, with the exact (analytic) gradients of F\nand of the interpolated bias at the cell centres. Unlike SQRA and Scharfetter-Gummel this is not a\nrate matrix (it uses the force, not potential differences), so it is an independent check of the\nh -> 0 value. Source: uniform over the A square.\n",
+ "rows": [
+  {
+   "n": 114,
+   "case": "unbiased",
+   "interp": "none",
+   "mfpt_fd": 967204.2377954884
+  },
+  {
+   "n": 228,
+   "case": "unbiased",
+   "interp": "none",
+   "mfpt_fd": 776158.0918604629
+  },
+  {
+   "n": 456,
+   "case": "unbiased",
+   "interp": "none",
+   "mfpt_fd": 736919.7637175362
+  },
+  {
+   "n": 114,
+   "case": "MFPT_U3",
+   "interp": "bilinear",
+   "mfpt_fd": 2419.2527034377003
+  },
+  {
+   "n": 228,
+   "case": "MFPT_U3",
+   "interp": "bilinear",
+   "mfpt_fd": 2110.79073410013
+  },
+  {
+   "n": 456,
+   "case": "MFPT_U3",
+   "interp": "bilinear",
+   "mfpt_fd": 2043.4291847250777
+  },
+  {
+   "n": 114,
+   "case": "MFPT_U3",
+   "interp": "bicubic",
+   "mfpt_fd": 2497.876395678153
+  },
+  {
+   "n": 228,
+   "case": "MFPT_U3",
+   "interp": "bicubic",
+   "mfpt_fd": 2144.119268323894
+  },
+  {
+   "n": 456,
+   "case": "MFPT_U3",
+   "interp": "bicubic",
+   "mfpt_fd": 2068.39858963961
+  },
+  {
+   "n": 114,
+   "case": "spectral_U3",
+   "interp": "bilinear",
+   "mfpt_fd": 14332.923108083569
+  },
+  {
+   "n": 228,
+   "case": "spectral_U3",
+   "interp": "bilinear",
+   "mfpt_fd": 13466.597037665812
+  },
+  {
+   "n": 456,
+   "case": "spectral_U3",
+   "interp": "bilinear",
+   "mfpt_fd": 13196.851025893046
+  },
+  {
+   "n": 114,
+   "case": "MFPT_U6",
+   "interp": "bilinear",
+   "mfpt_fd": 23.95065702025076
+  },
+  {
+   "n": 228,
+   "case": "MFPT_U6",
+   "interp": "bilinear",
+   "mfpt_fd": 23.39949862135731
+  },
+  {
+   "n": 456,
+   "case": "MFPT_U6",
+   "interp": "bilinear",
+   "mfpt_fd": 23.266498753176247
+  }
+ ]
+}

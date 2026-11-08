@@ -1,0 +1,5 @@
+[
+ {"case": "spectral_U3", "interp": "bicubic", "dt": 4e-4, "nwalk": 300, "seed": 1, "expected": 13355},
+ {"case": "MFPT_U3", "interp": "bicubic", "dt": 4e-4, "nwalk": 1000, "seed": 1, "expected": 2044},
+ {"case": "unbiased", "interp": "none", "dt": 2e-4, "nwalk": 400, "seed": 2, "expected": 724460}
+]

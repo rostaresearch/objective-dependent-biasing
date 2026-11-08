@@ -1,0 +1,165 @@
+{
+ "description": "Kolmogorov-Smirnov comparison of each complete Langevin sample with the network's first-passage-time\ndistribution. The network survival function (network_fpt_distribution.json, aligned grid n = 228) is\nrescaled in time so that its mean equals the h -> 0 network MFPT (results.json), because the n = 228\nmeans differ from the continuum by 0.1% (MFPT biases) to 6% (spectral bias, U = 6). Times below\n3 / (fastest retained rate) are excluded, where the truncated mode sum is inaccurate.\n",
+ "rows": [
+  {
+   "case": "MFPT_U3",
+   "interp": "bicubic",
+   "dt": 0.0002,
+   "n": 1500,
+   "ks_D": 0.032816248646570234,
+   "p_value": 0.07731969932492577,
+   "time_rescale": 0.9991630818988534,
+   "mean_over_network": 0.9370079677777132
+  },
+  {
+   "case": "MFPT_U3",
+   "interp": "bicubic",
+   "dt": 0.0004,
+   "n": 2000,
+   "ks_D": 0.030859523465787908,
+   "p_value": 0.04341003160886159,
+   "time_rescale": 0.9991630818988534,
+   "mean_over_network": 0.9738720020296275
+  },
+  {
+   "case": "MFPT_U3",
+   "interp": "bilinear",
+   "dt": 0.0001,
+   "n": 1500,
+   "ks_D": 0.02358539147093841,
+   "p_value": 0.36871132089865355,
+   "time_rescale": 0.9991828875315263,
+   "mean_over_network": 1.0243933357989767
+  },
+  {
+   "case": "MFPT_U3",
+   "interp": "bilinear",
+   "dt": 0.0002,
+   "n": 3000,
+   "ks_D": 0.02799169033811233,
+   "p_value": 0.017824225660350718,
+   "time_rescale": 0.9991828875315263,
+   "mean_over_network": 0.9638951824770733
+  },
+  {
+   "case": "MFPT_U3",
+   "interp": "bilinear",
+   "dt": 0.0004,
+   "n": 3000,
+   "ks_D": 0.008248772789581027,
+   "p_value": 0.9858443365786242,
+   "time_rescale": 0.9991828875315263,
+   "mean_over_network": 1.0010906012513816
+  },
+  {
+   "case": "MFPT_U6",
+   "interp": "bicubic",
+   "dt": 0.0002,
+   "n": 5000,
+   "ks_D": 0.01837316179330234,
+   "p_value": 0.06754407121480899,
+   "time_rescale": 0.9998386205142662,
+   "mean_over_network": 1.0203926814831292
+  },
+  {
+   "case": "MFPT_U6",
+   "interp": "bicubic",
+   "dt": 0.0004,
+   "n": 5000,
+   "ks_D": 0.009374649651491207,
+   "p_value": 0.7680632284188095,
+   "time_rescale": 0.9998386205142662,
+   "mean_over_network": 1.015837719574173
+  },
+  {
+   "case": "MFPT_U6",
+   "interp": "bilinear",
+   "dt": 0.0001,
+   "n": 5000,
+   "ks_D": 0.01310717941660855,
+   "p_value": 0.3537374652852837,
+   "time_rescale": 0.9999539815735091,
+   "mean_over_network": 1.0086958755819748
+  },
+  {
+   "case": "MFPT_U6",
+   "interp": "bilinear",
+   "dt": 0.0002,
+   "n": 5000,
+   "ks_D": 0.013628152517886016,
+   "p_value": 0.3082318356260566,
+   "time_rescale": 0.9999539815735091,
+   "mean_over_network": 1.012140376136323
+  },
+  {
+   "case": "MFPT_U6",
+   "interp": "bilinear",
+   "dt": 0.0004,
+   "n": 5000,
+   "ks_D": 0.012757235536662526,
+   "p_value": 0.3866544516614019,
+   "time_rescale": 0.9999539815735091,
+   "mean_over_network": 1.0180947695479383
+  },
+  {
+   "case": "spectral_U3",
+   "interp": "bicubic",
+   "dt": 0.0004,
+   "n": 1000,
+   "ks_D": 0.03534160467101011,
+   "p_value": 0.16055300821491092,
+   "time_rescale": 1.0231531399329972,
+   "mean_over_network": 1.0213485576879793
+  },
+  {
+   "case": "spectral_U3",
+   "interp": "bilinear",
+   "dt": 0.0001,
+   "n": 1000,
+   "ks_D": 0.033165433591137716,
+   "p_value": 0.2164976185386156,
+   "time_rescale": 1.0191572005392535,
+   "mean_over_network": 1.0595556984621788
+  },
+  {
+   "case": "spectral_U3",
+   "interp": "bilinear",
+   "dt": 0.0002,
+   "n": 2300,
+   "ks_D": 0.034402123814627095,
+   "p_value": 0.00843952227508887,
+   "time_rescale": 1.0191572005392535,
+   "mean_over_network": 1.0623207966959813
+  },
+  {
+   "case": "spectral_U3",
+   "interp": "bilinear",
+   "dt": 0.0004,
+   "n": 2300,
+   "ks_D": 0.011153928483707776,
+   "p_value": 0.9340354101383537,
+   "time_rescale": 1.0191572005392535,
+   "mean_over_network": 0.9908342488400385
+  },
+  {
+   "case": "spectral_U6",
+   "interp": "bilinear",
+   "dt": 0.0002,
+   "n": 200,
+   "ks_D": 0.048363274504196835,
+   "p_value": 0.7189999338035948,
+   "time_rescale": 1.0640147431272913,
+   "mean_over_network": 1.0440140298744658
+  },
+  {
+   "case": "spectral_U6",
+   "interp": "bilinear",
+   "dt": 0.0004,
+   "n": 500,
+   "ks_D": 0.03278084211422888,
+   "p_value": 0.6435031216106311,
+   "time_rescale": 1.0640147431272913,
+   "mean_over_network": 1.01862468792603
+  }
+ ]
+}

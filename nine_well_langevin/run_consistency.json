@@ -1,0 +1,466 @@
+{
+ "description": "Consistency of independent Langevin runs of the same case.\n\nWithin each complete run: walkers ordered by id are split into 10 blocks (chi-squared test of the\nblock means) and the lag-1 correlation of consecutive walker ids is computed; correlated random\nstreams would show up here. Across runs of the same case (different seeds, time steps, hosts):\nchi-squared of the run means about their weighted mean, using each run's standard error\nsd/sqrt(n). Time-step effects (<= 2%) are small against these errors and are ignored here.\n",
+ "within_run": [
+  {
+   "case": "MFPT_U3",
+   "interp": "bicubic",
+   "dt": 0.0002,
+   "host": "laptop",
+   "seed": 1,
+   "n": 500,
+   "mean": 1837.7595312,
+   "se": 85.01681243772897,
+   "block_p": 0.3554355840430457,
+   "lag1_r": 0.0020008459793098054,
+   "lag1_se": 0.044721359549995794
+  },
+  {
+   "case": "MFPT_U3",
+   "interp": "bicubic",
+   "dt": 0.0002,
+   "host": "markov",
+   "seed": 22,
+   "n": 1000,
+   "mean": 1954.1307626000003,
+   "se": 61.78374614031426,
+   "block_p": 0.8495157564050632,
+   "lag1_r": 0.0014197210268928591,
+   "lag1_se": 0.03162277660168379
+  },
+  {
+   "case": "MFPT_U3",
+   "interp": "bicubic",
+   "dt": 0.0004,
+   "host": "laptop",
+   "seed": 1,
+   "n": 1000,
+   "mean": 1980.6357,
+   "se": 62.7914916775024,
+   "block_p": 0.17666079475153795,
+   "lag1_r": -0.04390087678380834,
+   "lag1_se": 0.03162277660168379
+  },
+  {
+   "case": "MFPT_U3",
+   "interp": "bicubic",
+   "dt": 0.0004,
+   "host": "markov",
+   "seed": 21,
+   "n": 1000,
+   "mean": 2000.7527352,
+   "se": 64.33488667872709,
+   "block_p": 0.45835674068336085,
+   "lag1_r": 0.05001187327165383,
+   "lag1_se": 0.03162277660168379
+  },
+  {
+   "case": "MFPT_U3",
+   "interp": "bilinear",
+   "dt": 0.0001,
+   "host": "laptop",
+   "seed": 1,
+   "n": 500,
+   "mean": 2121.709043,
+   "se": 96.93480133044075,
+   "block_p": 0.8673456959239643,
+   "lag1_r": -0.0485852917521397,
+   "lag1_se": 0.044721359549995794
+  },
+  {
+   "case": "MFPT_U3",
+   "interp": "bilinear",
+   "dt": 0.0001,
+   "host": "markov",
+   "seed": 23,
+   "n": 1000,
+   "mean": 2045.6851540999999,
+   "se": 64.02540444959214,
+   "block_p": 0.7395630700183888,
+   "lag1_r": 0.052390768420466576,
+   "lag1_se": 0.03162277660168379
+  },
+  {
+   "case": "MFPT_U3",
+   "interp": "bilinear",
+   "dt": 0.0002,
+   "host": "laptop",
+   "seed": 1,
+   "n": 1000,
+   "mean": 1881.8266378,
+   "se": 59.955874481798595,
+   "block_p": 0.08010567968451285,
+   "lag1_r": 0.029773258316087046,
+   "lag1_se": 0.03162277660168379
+  },
+  {
+   "case": "MFPT_U3",
+   "interp": "bilinear",
+   "dt": 0.0002,
+   "host": "markov",
+   "seed": 22,
+   "n": 2000,
+   "mean": 1982.1617567000003,
+   "se": 44.86618586771523,
+   "block_p": 0.6610725377748052,
+   "lag1_r": 0.02841442806254755,
+   "lag1_se": 0.022360679774997897
+  },
+  {
+   "case": "MFPT_U3",
+   "interp": "bilinear",
+   "dt": 0.0004,
+   "host": "laptop",
+   "seed": 1,
+   "n": 1000,
+   "mean": 1978.0665768000001,
+   "se": 63.54590361982698,
+   "block_p": 0.8301417545582837,
+   "lag1_r": -0.04422777257154008,
+   "lag1_se": 0.03162277660168379
+  },
+  {
+   "case": "MFPT_U3",
+   "interp": "bilinear",
+   "dt": 0.0004,
+   "host": "markov",
+   "seed": 21,
+   "n": 2000,
+   "mean": 2046.8393232000003,
+   "se": 45.98914002513606,
+   "block_p": 0.30184416713279766,
+   "lag1_r": 0.029394660131239703,
+   "lag1_se": 0.022360679774997897
+  },
+  {
+   "case": "MFPT_U6",
+   "interp": "bicubic",
+   "dt": 0.0002,
+   "host": "laptop",
+   "seed": 1,
+   "n": 5000,
+   "mean": 22.918224719999998,
+   "se": 0.28880109988806535,
+   "block_p": 0.14464411005097907,
+   "lag1_r": 0.001997387670345628,
+   "lag1_se": 0.01414213562373095
+  },
+  {
+   "case": "MFPT_U6",
+   "interp": "bicubic",
+   "dt": 0.0004,
+   "host": "laptop",
+   "seed": 1,
+   "n": 5000,
+   "mean": 22.81591936,
+   "se": 0.2910216937162337,
+   "block_p": 0.06824679526970528,
+   "lag1_r": 0.012889160500224843,
+   "lag1_se": 0.01414213562373095
+  },
+  {
+   "case": "MFPT_U6",
+   "interp": "bilinear",
+   "dt": 0.0001,
+   "host": "laptop",
+   "seed": 1,
+   "n": 5000,
+   "mean": 23.42438898,
+   "se": 0.2929207973509636,
+   "block_p": 0.4579570568500928,
+   "lag1_r": 0.016913982642623095,
+   "lag1_se": 0.01414213562373095
+  },
+  {
+   "case": "MFPT_U6",
+   "interp": "bilinear",
+   "dt": 0.0002,
+   "host": "laptop",
+   "seed": 1,
+   "n": 5000,
+   "mean": 23.504378720000002,
+   "se": 0.2915370908446489,
+   "block_p": 0.5251028996988649,
+   "lag1_r": 0.0010880116856623306,
+   "lag1_se": 0.01414213562373095
+  },
+  {
+   "case": "MFPT_U6",
+   "interp": "bilinear",
+   "dt": 0.0004,
+   "host": "laptop",
+   "seed": 1,
+   "n": 5000,
+   "mean": 23.642654320000002,
+   "se": 0.2949577821240121,
+   "block_p": 0.2958640725310111,
+   "lag1_r": -0.0059284125056919814,
+   "lag1_se": 0.01414213562373095
+  },
+  {
+   "case": "spectral_U3",
+   "interp": "bicubic",
+   "dt": 0.0004,
+   "host": "laptop",
+   "seed": 1,
+   "n": 300,
+   "mean": 14235.182736000002,
+   "se": 822.200367787541,
+   "block_p": 0.23281161202232065,
+   "lag1_r": 0.05630262760827825,
+   "lag1_se": 0.05773502691896257
+  },
+  {
+   "case": "spectral_U3",
+   "interp": "bicubic",
+   "dt": 0.0004,
+   "host": "markov",
+   "seed": 21,
+   "n": 700,
+   "mean": 13384.376512571429,
+   "se": 500.05737240111614,
+   "block_p": 0.5180622654560949,
+   "lag1_r": 0.013410091569934104,
+   "lag1_se": 0.03779644730092272
+  },
+  {
+   "case": "spectral_U3",
+   "interp": "bilinear",
+   "dt": 0.0001,
+   "host": "markov",
+   "seed": 25,
+   "n": 1000,
+   "mean": 13792.328605300001,
+   "se": 439.0596591164818,
+   "block_p": 0.5459395807811693,
+   "lag1_r": -0.003177993729086645,
+   "lag1_se": 0.03162277660168379
+  },
+  {
+   "case": "spectral_U3",
+   "interp": "bilinear",
+   "dt": 0.0002,
+   "host": "laptop",
+   "seed": 1,
+   "n": 300,
+   "mean": 12775.212387333333,
+   "se": 747.2261331571992,
+   "block_p": 0.9895777491295114,
+   "lag1_r": -0.07019871826671815,
+   "lag1_se": 0.05773502691896257
+  },
+  {
+   "case": "spectral_U3",
+   "interp": "bilinear",
+   "dt": 0.0002,
+   "host": "markov",
+   "seed": 22,
+   "n": 1000,
+   "mean": 14701.776215,
+   "se": 445.79363051067526,
+   "block_p": 0.39886963043663354,
+   "lag1_r": 0.02890638082956714,
+   "lag1_se": 0.03162277660168379
+  },
+  {
+   "case": "spectral_U3",
+   "interp": "bilinear",
+   "dt": 0.0002,
+   "host": "markov",
+   "seed": 24,
+   "n": 1000,
+   "mean": 13270.800966200002,
+   "se": 400.2990709804968,
+   "block_p": 0.8103478997207596,
+   "lag1_r": -0.046798839739672145,
+   "lag1_se": 0.03162277660168379
+  },
+  {
+   "case": "spectral_U3",
+   "interp": "bilinear",
+   "dt": 0.0004,
+   "host": "laptop",
+   "seed": 1,
+   "n": 300,
+   "mean": 13474.091674666668,
+   "se": 788.8852318814105,
+   "block_p": 0.16707874624525895,
+   "lag1_r": 0.08922124179140294,
+   "lag1_se": 0.05773502691896257
+  },
+  {
+   "case": "spectral_U3",
+   "interp": "bilinear",
+   "dt": 0.0004,
+   "host": "markov",
+   "seed": 21,
+   "n": 1000,
+   "mean": 13366.910816,
+   "se": 417.98590118882106,
+   "block_p": 0.11228690217845697,
+   "lag1_r": -0.002161519664876218,
+   "lag1_se": 0.03162277660168379
+  },
+  {
+   "case": "spectral_U3",
+   "interp": "bilinear",
+   "dt": 0.0004,
+   "host": "markov",
+   "seed": 26,
+   "n": 1000,
+   "mean": 12255.745385600001,
+   "se": 379.3458133579713,
+   "block_p": 0.9596364190701147,
+   "lag1_r": -0.009264099658591651,
+   "lag1_se": 0.03162277660168379
+  },
+  {
+   "case": "spectral_U6",
+   "interp": "bicubic",
+   "dt": 0.0004,
+   "host": "markov",
+   "seed": 21,
+   "n": 300,
+   "mean": 188501.66980133334,
+   "se": 10987.67805070518,
+   "block_p": 0.20558934357727715,
+   "lag1_r": -0.015302023192521054,
+   "lag1_se": 0.05773502691896257
+  },
+  {
+   "case": "spectral_U6",
+   "interp": "bilinear",
+   "dt": 0.0002,
+   "host": "markov",
+   "seed": 22,
+   "n": 200,
+   "mean": 146945.43381800002,
+   "se": 10239.181481238804,
+   "block_p": 0.8636905682357905,
+   "lag1_r": 0.11734910851037772,
+   "lag1_se": 0.07071067811865475
+  },
+  {
+   "case": "spectral_U6",
+   "interp": "bilinear",
+   "dt": 0.0004,
+   "host": "laptop",
+   "seed": 1,
+   "n": 100,
+   "mean": 158057.60254400002,
+   "se": 13684.79123629646,
+   "block_p": 0.3147828969975274,
+   "lag1_r": 0.18240158491117792,
+   "lag1_se": 0.1
+  },
+  {
+   "case": "spectral_U6",
+   "interp": "bilinear",
+   "dt": 0.0004,
+   "host": "markov",
+   "seed": 21,
+   "n": 400,
+   "mean": 139700.44033100002,
+   "se": 7067.565890871672,
+   "block_p": 0.06887084936554196,
+   "lag1_r": -0.07833887705581534,
+   "lag1_se": 0.05
+  }
+ ],
+ "across_runs": {
+  "MFPT_U3|bicubic": {
+   "runs": 4,
+   "weighted_mean": 1956.2368973727175,
+   "chi2": 2.5729809423132797,
+   "dof": 3,
+   "p_value": 0.4622460380101219,
+   "z_scores": [
+    -1.39,
+    -0.03,
+    0.39,
+    0.69
+   ]
+  },
+  "MFPT_U3|bilinear": {
+   "runs": 6,
+   "weighted_mean": 1999.4995313625632,
+   "chi2": 7.284547794276889,
+   "dof": 5,
+   "p_value": 0.20032357822491542,
+   "z_scores": [
+    1.26,
+    0.72,
+    -1.96,
+    -0.39,
+    -0.34,
+    1.03
+   ]
+  },
+  "MFPT_U6|bicubic": {
+   "runs": 2,
+   "weighted_mean": 22.867463841290807,
+   "chi2": 0.062262970074967214,
+   "dof": 1,
+   "p_value": 0.8029543262943535,
+   "z_scores": [
+    0.18,
+    -0.18
+   ]
+  },
+  "MFPT_U6|bilinear": {
+   "runs": 3,
+   "weighted_mean": 23.523199574114674,
+   "chi2": 0.28197463876844464,
+   "dof": 2,
+   "p_value": 0.8685003247467625,
+   "z_scores": [
+    -0.34,
+    -0.06,
+    0.4
+   ]
+  },
+  "spectral_U3|bicubic": {
+   "runs": 2,
+   "weighted_mean": 13614.110963488138,
+   "chi2": 0.7816586094868032,
+   "dof": 1,
+   "p_value": 0.37663435760717745,
+   "z_scores": [
+    0.76,
+    -0.46
+   ]
+  },
+  "spectral_U3|bilinear": {
+   "runs": 7,
+   "weighted_mean": 13358.144550912964,
+   "chi2": 19.185637793537293,
+   "dof": 6,
+   "p_value": 0.0038613404005630966,
+   "z_scores": [
+    0.99,
+    -0.78,
+    3.01,
+    -0.22,
+    0.15,
+    0.02,
+    -2.91
+   ]
+  },
+  "spectral_U6|bilinear": {
+   "runs": 3,
+   "weighted_mean": 144489.49856956856,
+   "chi2": 1.4997065804026117,
+   "dof": 2,
+   "p_value": 0.47243585862667925,
+   "z_scores": [
+    0.24,
+    0.99,
+    -0.68
+   ]
+  }
+ },
+ "within_run_summary": {
+  "runs": 28,
+  "min_block_p": 0.06824679526970528,
+  "max_abs_lag1_over_se": 1.824015849111779
+ }
+}

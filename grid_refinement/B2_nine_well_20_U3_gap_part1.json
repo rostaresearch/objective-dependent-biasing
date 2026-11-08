@@ -1,0 +1,86 @@
+{
+ "job": "nine_well_20_U3_gap_part1",
+ "maxiter": 20000,
+ "ftol": 1e-13,
+ "system": "nine_well",
+ "grid": "20",
+ "n": 400,
+ "U": 3.0,
+ "objective": "gap",
+ "best_start": "interp_coarse",
+ "best_value": 0.11548340661065068,
+ "value_spread_rel": 8.611874215117656e-05,
+ "stationarity": {
+  "cluster_size": 2,
+  "lams": [
+   -5.563135711787403e-17,
+   -0.11548340661066743,
+   -0.11559773353468504,
+   -0.14524602183838167,
+   -0.18111972541825383,
+   -0.28342614125240617,
+   -0.36095208186230326
+  ],
+  "rel_sep_l2_l3": 0.0009899857249885608,
+  "lam3_over_lam2": 1.0009899857249887,
+  "single_eigvec_proj_grad_rel": 5.513564745113036e-06,
+  "clarke_proj_grad_rel": 2.251278502451682e-08,
+  "clarke_Y": [
+   [
+    0.9999498261806524,
+    -9.8113469005657e-08
+   ],
+   [
+    -9.8113469005657e-08,
+    5.0173819347573616e-05
+   ]
+  ]
+ },
+ "seconds": 1686.0190241336823,
+ "runs": [
+  {
+   "start": "interp_coarse",
+   "fun": -0.11547673058916733,
+   "nit": 216,
+   "nfev": 644,
+   "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+   "success": true,
+   "proj_grad_inf": 3.5159846300748305e-06,
+   "proj_grad_rel": 3.0447559539790635e-05,
+   "seconds": 145.25041437149048,
+   "stage1_gamma": 0.11547673058916733,
+   "stage1_rel_sep": 9.798150618069857e-10,
+   "value": 0.11548340661065068,
+   "stage2_gamma": 0.11548340661065068,
+   "stage2_seconds": 1249.5880017280579
+  },
+  {
+   "start": "flatten",
+   "fun": -0.11547346132493404,
+   "nit": 685,
+   "nfev": 1217,
+   "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+   "success": true,
+   "proj_grad_inf": 0.0018754849679828494,
+   "proj_grad_rel": 0.01624169697923309,
+   "seconds": 179.78392601013184,
+   "stage1_gamma": 0.11547346132493404,
+   "stage1_rel_sep": 2.5010241281945006e-09,
+   "value": 0.11547346132493404
+  },
+  {
+   "start": "zeros",
+   "fun": -0.1154763433797898,
+   "nit": 477,
+   "nfev": 606,
+   "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+   "success": true,
+   "proj_grad_inf": 6.570089974659583e-05,
+   "proj_grad_rel": 0.0005689554918664896,
+   "seconds": 96.94834995269775,
+   "stage1_gamma": 0.1154763433797898,
+   "stage1_rel_sep": 1.9605341284048908e-08,
+   "value": 0.1154763433797898
+  }
+ ]
+}

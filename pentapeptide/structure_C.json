@@ -1,0 +1,383 @@
+{
+  "note": "Descriptive numbers used in the README: where the optimal biases sit at the",
+  "biases": {
+    "spectral_U1": {
+      "U": 1.0,
+      "b_A": 1.0,
+      "b_B": -1.0,
+      "n_upper": 5,
+      "n_lower": 203,
+      "upper_by_macrostate": [
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lower_by_macrostate": [
+        1,
+        3,
+        10,
+        3,
+        186
+      ],
+      "biased_macrostate_population": [
+        0.0006158706767660091,
+        0.005967180136374848,
+        0.017636204089037575,
+        0.006758433634021524,
+        0.9690223114638
+      ]
+    },
+    "mfpt_AB_U1": {
+      "U": 1.0,
+      "b_A": 1.0,
+      "b_B": -1.0,
+      "n_upper": 206,
+      "n_lower": 4,
+      "upper_by_macrostate": [
+        5,
+        10,
+        13,
+        22,
+        156
+      ],
+      "lower_by_macrostate": [
+        1,
+        1,
+        1,
+        0,
+        1
+      ],
+      "biased_macrostate_population": [
+        0.0036831717286224066,
+        0.012631814288391278,
+        0.027532544184158403,
+        0.017422856567425964,
+        0.938729613231402
+      ]
+    },
+    "spectral_U2": {
+      "U": 2.0,
+      "b_A": 2.0,
+      "b_B": -2.0,
+      "n_upper": 6,
+      "n_lower": 151,
+      "upper_by_macrostate": [
+        5,
+        0,
+        0,
+        1,
+        0
+      ],
+      "lower_by_macrostate": [
+        0,
+        0,
+        0,
+        0,
+        151
+      ],
+      "biased_macrostate_population": [
+        0.00011597711457267469,
+        0.0015560676515536057,
+        0.0046316618972594755,
+        0.0017993769596453101,
+        0.9918969163769689
+      ]
+    },
+    "mfpt_AB_U2": {
+      "U": 2.0,
+      "b_A": 2.0,
+      "b_B": -2.0,
+      "n_upper": 109,
+      "n_lower": 1,
+      "upper_by_macrostate": [
+        5,
+        8,
+        11,
+        21,
+        64
+      ],
+      "lower_by_macrostate": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "biased_macrostate_population": [
+        0.0019217910345601206,
+        0.008226435935281308,
+        0.01436821349829573,
+        0.008314494480315852,
+        0.967169065051547
+      ]
+    },
+    "spectral_U3": {
+      "U": 3.0,
+      "b_A": 3.0,
+      "b_B": -3.0,
+      "n_upper": 6,
+      "n_lower": 134,
+      "upper_by_macrostate": [
+        5,
+        0,
+        0,
+        1,
+        0
+      ],
+      "lower_by_macrostate": [
+        0,
+        0,
+        0,
+        0,
+        134
+      ],
+      "biased_macrostate_population": [
+        1.7786161780682816e-05,
+        0.0005987123635088192,
+        0.0011591981073704118,
+        0.0005597525279679116,
+        0.9976645508393722
+      ]
+    },
+    "mfpt_AB_U3": {
+      "U": 3.0,
+      "b_A": 3.0,
+      "b_B": -3.0,
+      "n_upper": 47,
+      "n_lower": 1,
+      "upper_by_macrostate": [
+        5,
+        5,
+        7,
+        21,
+        9
+      ],
+      "lower_by_macrostate": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "biased_macrostate_population": [
+        0.0004083598825467418,
+        0.002762592048227966,
+        0.004030677760584671,
+        0.0017867359022068242,
+        0.9910116344064333
+      ]
+    },
+    "mfpt_AB_alternative_U2": {
+      "U": 2.0,
+      "b_A": 2.0,
+      "b_B": -2.0,
+      "n_upper": 22,
+      "n_lower": 188,
+      "upper_by_macrostate": [
+        5,
+        0,
+        0,
+        17,
+        0
+      ],
+      "lower_by_macrostate": [
+        0,
+        0,
+        0,
+        0,
+        188
+      ],
+      "biased_macrostate_population": [
+        8.906342158687676e-05,
+        0.0011860875476998145,
+        0.004932079382074555,
+        0.0004600732262630906,
+        0.9933326964223759
+      ]
+    },
+    "mfpt_BA_U2": {
+      "U": 2.0,
+      "b_A": -2.0,
+      "b_B": 2.0,
+      "n_upper": 201,
+      "n_lower": 11,
+      "upper_by_macrostate": [
+        0,
+        0,
+        4,
+        21,
+        176
+      ],
+      "lower_by_macrostate": [
+        6,
+        1,
+        4,
+        0,
+        0
+      ],
+      "biased_macrostate_population": [
+        0.11665478346634248,
+        0.10684758969409072,
+        0.20426228117998713,
+        0.01175556072602048,
+        0.5604797849335592
+      ]
+    },
+    "K2_spectral_U2": {
+      "U": 2.0,
+      "b_A": 2.0,
+      "b_B": -2.0,
+      "n_upper": 5,
+      "n_lower": 138,
+      "upper_by_macrostate": [
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "lower_by_macrostate": [
+        0,
+        0,
+        0,
+        0,
+        138
+      ],
+      "biased_macrostate_population": [
+        8.689530985826878e-05,
+        0.0018530254062844346,
+        0.005787668999109464,
+        0.00207573234145156,
+        0.9901966779432961
+      ]
+    },
+    "K2_mfpt_AB_U2": {
+      "U": 2.0,
+      "b_A": 2.0,
+      "b_B": -2.0,
+      "n_upper": 186,
+      "n_lower": 1,
+      "upper_by_macrostate": [
+        5,
+        6,
+        4,
+        22,
+        149
+      ],
+      "lower_by_macrostate": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "biased_macrostate_population": [
+        0.001919634668541022,
+        0.007831209144806643,
+        0.019773309521434794,
+        0.010013551214541455,
+        0.9604622954506761
+      ]
+    }
+  },
+  "unbiased_macrostate_population": [
+    0.003779771815163456,
+    0.013076884062323253,
+    0.021552653733781773,
+    0.020756487688083865,
+    0.9408342027006475
+  ],
+  "correlations": {
+    "spectral_U2_vs_mfpt_alternative_U2": 0.9231633599237165,
+    "spectral_U2_vs_mfpt_primary_U2": 0.30800329903243495,
+    "mfpt_primary_U2_vs_mfpt_alternative_U2": 0.2481438273275395,
+    "mfpt_AB_U2_vs_mfpt_BA_U2": 0.24831526337662965
+  },
+  "mfpt_split": {
+    "unbiased": {
+      "escape_from_macrostate0": 23.338914380307582,
+      "search_for_B_in_main_basin": 56.40888180956262,
+      "total": 79.7477961898702,
+      "direct": 79.74779618987013
+    },
+    "spectral_U2": {
+      "escape_from_macrostate0": 5.584389508869552,
+      "search_for_B_in_main_basin": 51.35475187937738,
+      "total": 56.93914138824693,
+      "direct": 56.93914138824691
+    },
+    "mfpt_AB_U2": {
+      "escape_from_macrostate0": 13.272173874023608,
+      "search_for_B_in_main_basin": 11.480145278632609,
+      "total": 24.752319152656217,
+      "direct": 24.752319152656202
+    }
+  },
+  "last_crossing_by_destination_macrostate": {
+    "destination_macrostates": [
+      1,
+      2,
+      4
+    ],
+    "n_cut_edges_per_destination": [
+      12,
+      18,
+      13
+    ],
+    "unbiased": [
+      0.3119184872508221,
+      0.45631840981287763,
+      0.2317631029363001
+    ],
+    "spectral_U1": {
+      "weights": [
+        0.26387281076405833,
+        0.4721121662343174,
+        0.2640150230016242
+      ],
+      "overlap_with_unbiased": 0.9519543235132361
+    },
+    "mfpt_AB_U1": {
+      "weights": [
+        0.3016678415447001,
+        0.4687457918122637,
+        0.22958636664303622
+      ],
+      "overlap_with_unbiased": 0.9875726180006139
+    },
+    "spectral_U2": {
+      "weights": [
+        0.24696526582445377,
+        0.4134671882239771,
+        0.3395675459515691
+      ],
+      "overlap_with_unbiased": 0.892195556984731
+    },
+    "mfpt_AB_U2": {
+      "weights": [
+        0.3521750792036127,
+        0.3906715548325602,
+        0.25715336596382715
+      ],
+      "overlap_with_unbiased": 0.9343531450196825
+    },
+    "spectral_U3": {
+      "weights": [
+        0.2537909901006777,
+        0.3287254485667005,
+        0.417483561332622
+      ],
+      "overlap_with_unbiased": 0.8142795416036783
+    },
+    "mfpt_AB_U3": {
+      "weights": [
+        0.3581897285463912,
+        0.3389875497005404,
+        0.30282272175306846
+      ],
+      "overlap_with_unbiased": 0.8826691398876626
+    }
+  }
+}

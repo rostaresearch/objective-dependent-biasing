@@ -1,0 +1,101 @@
+{
+ "job": "nine_well_40_U3_mfpt",
+ "system": "nine_well",
+ "grid": "40",
+ "n": 1600,
+ "U": 3.0,
+ "objective": "mfpt",
+ "best_start": "flatten",
+ "best_value": 75148.54715614449,
+ "value_spread_rel": 1.4143237390299665e-07,
+ "stationarity": {
+  "proj_grad_rel": 2.9484852573290687e-08
+ },
+ "seconds": 4147.251984834671,
+ "runs": [
+  {
+   "start": "interp_coarse",
+   "fun": 75148.5473654009,
+   "nit": 981,
+   "nfev": 1060,
+   "message": "ABNORMAL_TERMINATION_IN_LNSRCH",
+   "success": false,
+   "proj_grad_inf": 0.0020752231721417047,
+   "proj_grad_rel": 2.761494725974114e-08,
+   "seconds": 229.07609724998474,
+   "value": 75148.5473654009
+  },
+  {
+   "start": "interp_coarse_other",
+   "fun": 75148.5577845819,
+   "nit": 3173,
+   "nfev": 3327,
+   "message": "ABNORMAL_TERMINATION_IN_LNSRCH",
+   "success": false,
+   "proj_grad_inf": 0.002405345010635626,
+   "proj_grad_rel": 3.2007866571846926e-08,
+   "seconds": 812.8670115470886,
+   "value": 75148.5577845819
+  },
+  {
+   "start": "flatten",
+   "fun": 75148.54715614449,
+   "nit": 1557,
+   "nfev": 1683,
+   "message": "ABNORMAL_TERMINATION_IN_LNSRCH",
+   "success": false,
+   "proj_grad_inf": 0.002215743833979731,
+   "proj_grad_rel": 2.9484852573290687e-08,
+   "seconds": 426.7536778450012,
+   "value": 75148.54715614449
+  },
+  {
+   "start": "zeros",
+   "fun": 75148.54986465306,
+   "nit": 1546,
+   "nfev": 1656,
+   "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+   "success": true,
+   "proj_grad_inf": 0.001185518791442311,
+   "proj_grad_rel": 1.5775670902199706e-08,
+   "seconds": 436.25299167633057,
+   "value": 75148.54986465306
+  },
+  {
+   "start": "random0",
+   "fun": 75148.55019702182,
+   "nit": 2106,
+   "nfev": 2214,
+   "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+   "success": true,
+   "proj_grad_inf": 0.0011333510828378294,
+   "proj_grad_rel": 1.5081476354054062e-08,
+   "seconds": 829.6894948482513,
+   "value": 75148.55019702182
+  },
+  {
+   "start": "random1",
+   "fun": 75148.55248873768,
+   "nit": 1974,
+   "nfev": 2140,
+   "message": "ABNORMAL_TERMINATION_IN_LNSRCH",
+   "success": false,
+   "proj_grad_inf": 0.0022457515387941385,
+   "proj_grad_rel": 2.988416229510033e-08,
+   "seconds": 751.344922542572,
+   "value": 75148.55248873768
+  },
+  {
+   "start": "random2",
+   "fun": 75148.5511464485,
+   "nit": 1942,
+   "nfev": 2052,
+   "message": "ABNORMAL_TERMINATION_IN_LNSRCH",
+   "success": false,
+   "proj_grad_inf": 0.0022993265541756255,
+   "proj_grad_rel": 3.059708429633748e-08,
+   "seconds": 660.9299492835999,
+   "value": 75148.5511464485
+  }
+ ]
+}

@@ -1,0 +1,450 @@
+{
+ "published_grid_lag1_plainDHAM": {
+  "omega_state": 0.6634882756536388,
+  "omega_edge": 0.5656618806670641,
+  "states": 87,
+  "A": 22,
+  "B": 14,
+  "escape_median": 0.9313609166103
+ },
+ "published_grid_lag1": {
+  "omega_state": 0.6727238120382152,
+  "omega_edge": 0.518894459925529,
+  "states": 87,
+  "A": 22,
+  "B": 14,
+  "escape_median": 0.9517556797386535
+ },
+ "published_grid_lag2_plainDHAM": {
+  "omega_state": 0.6485517008400843,
+  "omega_edge": 0.5095616072356399,
+  "states": 87,
+  "A": 22,
+  "B": 14,
+  "escape_median": 0.943536062454009
+ },
+ "published_grid_lag2": {
+  "omega_state": 0.6494500511026097,
+  "omega_edge": 0.5920726797225235,
+  "states": 87,
+  "A": 22,
+  "B": 14,
+  "escape_median": 0.95937333902493
+ },
+ "w0.2_g1_centroid_lag1": {
+  "omega_state": 0.6478437750540409,
+  "omega_edge": 0.6666448643619542,
+  "states": 27,
+  "A": 10,
+  "B": 2,
+  "escape_median": 0.9374464466263276,
+  "region_states": [
+   10,
+   15,
+   2
+  ]
+ },
+ "w0.2_g1_centroid_lag2": {
+  "omega_state": 0.7377024874164284,
+  "omega_edge": 0.7308960409851748,
+  "states": 27,
+  "A": 10,
+  "B": 2,
+  "escape_median": 0.9459685555286197,
+  "region_states": [
+   10,
+   15,
+   2
+  ]
+ },
+ "w0.2_g1_average_lag1": {
+  "omega_state": 0.649662868041411,
+  "omega_edge": 0.6736114997801846,
+  "states": 27,
+  "A": 10,
+  "B": 2,
+  "escape_median": 0.9253994264067907,
+  "region_states": [
+   10,
+   15,
+   2
+  ]
+ },
+ "w0.2_g1_average_lag2": {
+  "omega_state": 0.7405205214693782,
+  "omega_edge": 0.7309345498460039,
+  "states": 27,
+  "A": 10,
+  "B": 2,
+  "escape_median": 0.9352919028369019,
+  "region_states": [
+   10,
+   15,
+   2
+  ]
+ },
+ "w0.2_g3_centroid_lag1": {
+  "omega_state": 0.6620957542399464,
+  "omega_edge": 0.6020474099985441,
+  "states": 41,
+  "A": 10,
+  "B": 2,
+  "escape_median": 0.9385074514230103,
+  "region_states": [
+   10,
+   29,
+   2
+  ]
+ },
+ "w0.2_g3_centroid_lag2": {
+  "omega_state": 0.7322054016982036,
+  "omega_edge": 0.6031114188260326,
+  "states": 41,
+  "A": 10,
+  "B": 2,
+  "escape_median": 0.946398658986146,
+  "region_states": [
+   10,
+   29,
+   2
+  ]
+ },
+ "w0.2_g3_average_lag1": {
+  "omega_state": 0.6636125686214123,
+  "omega_edge": 0.5953627721674623,
+  "states": 41,
+  "A": 10,
+  "B": 2,
+  "escape_median": 0.9321429055375143,
+  "region_states": [
+   10,
+   29,
+   2
+  ]
+ },
+ "w0.2_g3_average_lag2": {
+  "omega_state": 0.7369611205354942,
+  "omega_edge": 0.5999012432138604,
+  "states": 41,
+  "A": 10,
+  "B": 2,
+  "escape_median": 0.9431789241717837,
+  "region_states": [
+   10,
+   29,
+   2
+  ]
+ },
+ "w0.25_g1_centroid_lag1": {
+  "omega_state": 0.7295287883801647,
+  "omega_edge": 0.7022938207745165,
+  "states": 22,
+  "A": 8,
+  "B": 2,
+  "escape_median": 0.9091845806661634,
+  "region_states": [
+   8,
+   12,
+   2
+  ]
+ },
+ "w0.25_g1_centroid_lag2": {
+  "omega_state": 0.7426993402053759,
+  "omega_edge": 0.7373930076301545,
+  "states": 22,
+  "A": 8,
+  "B": 2,
+  "escape_median": 0.9244765417986684,
+  "region_states": [
+   8,
+   12,
+   2
+  ]
+ },
+ "w0.25_g1_average_lag1": {
+  "omega_state": 0.7213827370965995,
+  "omega_edge": 0.7087633491286696,
+  "states": 22,
+  "A": 8,
+  "B": 2,
+  "escape_median": 0.8949857175180758,
+  "region_states": [
+   8,
+   12,
+   2
+  ]
+ },
+ "w0.25_g1_average_lag2": {
+  "omega_state": 0.7450405580121657,
+  "omega_edge": 0.7378715266130311,
+  "states": 22,
+  "A": 8,
+  "B": 2,
+  "escape_median": 0.9120877435742437,
+  "region_states": [
+   8,
+   12,
+   2
+  ]
+ },
+ "w0.25_g3_centroid_lag1": {
+  "omega_state": 0.6795724799419229,
+  "omega_edge": 0.5524879017487662,
+  "states": 37,
+  "A": 8,
+  "B": 2,
+  "escape_median": 0.9270897634255225,
+  "region_states": [
+   8,
+   27,
+   2
+  ]
+ },
+ "w0.25_g3_centroid_lag2": {
+  "omega_state": 0.6973298618980761,
+  "omega_edge": 0.6075916404153152,
+  "states": 37,
+  "A": 8,
+  "B": 2,
+  "escape_median": 0.942019493925845,
+  "region_states": [
+   8,
+   27,
+   2
+  ]
+ },
+ "w0.25_g3_average_lag1": {
+  "omega_state": 0.6750061731224664,
+  "omega_edge": 0.5515059156497986,
+  "states": 37,
+  "A": 8,
+  "B": 2,
+  "escape_median": 0.9173834365475093,
+  "region_states": [
+   8,
+   27,
+   2
+  ]
+ },
+ "w0.25_g3_average_lag2": {
+  "omega_state": 0.7000304013419838,
+  "omega_edge": 0.6080456202288087,
+  "states": 37,
+  "A": 8,
+  "B": 2,
+  "escape_median": 0.9312907708477841,
+  "region_states": [
+   8,
+   27,
+   2
+  ]
+ },
+ "w0.33_g1_centroid_lag1": {
+  "omega_state": 0.6761259389911902,
+  "omega_edge": 0.7357959836528635,
+  "states": 17,
+  "A": 6,
+  "B": 2,
+  "escape_median": 0.9134956206212335,
+  "region_states": [
+   6,
+   9,
+   2
+  ]
+ },
+ "w0.33_g1_centroid_lag2": {
+  "omega_state": 0.7535293405368698,
+  "omega_edge": 0.7502480290455242,
+  "states": 17,
+  "A": 6,
+  "B": 2,
+  "escape_median": 0.9214179024381037,
+  "region_states": [
+   6,
+   9,
+   2
+  ]
+ },
+ "w0.33_g1_average_lag1": {
+  "omega_state": 0.6697958232234738,
+  "omega_edge": 0.7587773759406625,
+  "states": 17,
+  "A": 6,
+  "B": 2,
+  "escape_median": 0.9005144183405883,
+  "region_states": [
+   6,
+   9,
+   2
+  ]
+ },
+ "w0.33_g1_average_lag2": {
+  "omega_state": 0.7588420023178989,
+  "omega_edge": 0.759460209209434,
+  "states": 17,
+  "A": 6,
+  "B": 2,
+  "escape_median": 0.9110254017934709,
+  "region_states": [
+   6,
+   9,
+   2
+  ]
+ },
+ "w0.33_g3_centroid_lag1": {
+  "omega_state": 0.6742986152016497,
+  "omega_edge": 0.5106614920888157,
+  "states": 31,
+  "A": 6,
+  "B": 2,
+  "escape_median": 0.9316613514369657,
+  "region_states": [
+   6,
+   23,
+   2
+  ]
+ },
+ "w0.33_g3_centroid_lag2": {
+  "omega_state": 0.7232319490418044,
+  "omega_edge": 0.5178846737823504,
+  "states": 31,
+  "A": 6,
+  "B": 2,
+  "escape_median": 0.9374058743005631,
+  "region_states": [
+   6,
+   23,
+   2
+  ]
+ },
+ "w0.33_g3_average_lag1": {
+  "omega_state": 0.6445426764388023,
+  "omega_edge": 0.5001692328699239,
+  "states": 31,
+  "A": 6,
+  "B": 2,
+  "escape_median": 0.913511719362363,
+  "region_states": [
+   6,
+   23,
+   2
+  ]
+ },
+ "w0.33_g3_average_lag2": {
+  "omega_state": 0.7311760053581645,
+  "omega_edge": 0.523684269101078,
+  "states": 31,
+  "A": 6,
+  "B": 2,
+  "escape_median": 0.9265951756131129,
+  "region_states": [
+   6,
+   23,
+   2
+  ]
+ },
+ "w0.5_g1_centroid_lag1": {
+  "omega_state": 0.831996290083863,
+  "omega_edge": 0.8433471066562923,
+  "states": 12,
+  "A": 4,
+  "B": 2,
+  "escape_median": 0.8835348295273424,
+  "region_states": [
+   4,
+   6,
+   2
+  ]
+ },
+ "w0.5_g1_centroid_lag2": {
+  "omega_state": 0.7545453324499656,
+  "omega_edge": 0.7847901637574416,
+  "states": 12,
+  "A": 4,
+  "B": 2,
+  "escape_median": 0.9287211810550453,
+  "region_states": [
+   4,
+   6,
+   2
+  ]
+ },
+ "w0.5_g1_average_lag1": {
+  "omega_state": 0.8129594633425046,
+  "omega_edge": 0.838217898460899,
+  "states": 12,
+  "A": 4,
+  "B": 2,
+  "escape_median": 0.8309290398091751,
+  "region_states": [
+   4,
+   6,
+   2
+  ]
+ },
+ "w0.5_g1_average_lag2": {
+  "omega_state": 0.7566310669758258,
+  "omega_edge": 0.8062197257230531,
+  "states": 12,
+  "A": 4,
+  "B": 2,
+  "escape_median": 0.8890305084694453,
+  "region_states": [
+   4,
+   6,
+   2
+  ]
+ },
+ "w0.5_g3_centroid_lag1": {
+  "omega_state": 0.7088321532312392,
+  "omega_edge": 0.5627070486275874,
+  "states": 22,
+  "A": 4,
+  "B": 2,
+  "escape_median": 0.9227266498015536,
+  "region_states": [
+   4,
+   16,
+   2
+  ]
+ },
+ "w0.5_g3_centroid_lag2": {
+  "omega_state": 0.661754439813632,
+  "omega_edge": 0.624152396752615,
+  "states": 22,
+  "A": 4,
+  "B": 2,
+  "escape_median": 0.9355612339692974,
+  "region_states": [
+   4,
+   16,
+   2
+  ]
+ },
+ "w0.5_g3_average_lag1": {
+  "omega_state": 0.693109402887863,
+  "omega_edge": 0.5465349886212294,
+  "states": 22,
+  "A": 4,
+  "B": 2,
+  "escape_median": 0.8690439171390807,
+  "region_states": [
+   4,
+   16,
+   2
+  ]
+ },
+ "w0.5_g3_average_lag2": {
+  "omega_state": 0.6710049092507466,
+  "omega_edge": 0.613789350916939,
+  "states": 22,
+  "A": 4,
+  "B": 2,
+  "escape_median": 0.9043253541082796,
+  "region_states": [
+   4,
+   16,
+   2
+  ]
+ }
+}

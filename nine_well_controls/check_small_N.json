@@ -1,0 +1,42 @@
+{
+ "nine_well_N100": {
+  "pairs": 5000,
+  "paths_mean": 0.80595,
+  "paths_se": 0.000597537864908995,
+  "multinomial_mean": 0.8065180000000001,
+  "multinomial_se": 0.0005988748911083184,
+  "paths_median": 0.81,
+  "multinomial_median": 0.81,
+  "pooled_chi2_per_dof": 0.5299155687381818
+ },
+ "nine_well_N300": {
+  "pairs": 5000,
+  "paths_mean": 0.8859506666666668,
+  "paths_se": 0.00034711336912055435,
+  "multinomial_mean": 0.8862939999999999,
+  "multinomial_se": 0.0003486905688429212,
+  "paths_median": 0.8866666666666667,
+  "multinomial_median": 0.8866666666666667,
+  "pooled_chi2_per_dof": 1.1150602029182846
+ },
+ "bottleneck_grid_N100": {
+  "pairs": 5000,
+  "paths_mean": 0.9110299999999999,
+  "paths_se": 0.0005981570195191222,
+  "multinomial_mean": 0.910442,
+  "multinomial_se": 0.0005958430390631409,
+  "paths_median": 0.92,
+  "multinomial_median": 0.9199999999999999,
+  "pooled_chi2_per_dof": 1.4011058244375276
+ },
+ "bottleneck_grid_N300": {
+  "pairs": 5000,
+  "paths_mean": 0.9465093333333334,
+  "paths_se": 0.0003416137265001705,
+  "multinomial_mean": 0.9468833333333334,
+  "multinomial_se": 0.000336969418328858,
+  "paths_median": 0.9500000000000001,
+  "multinomial_median": 0.9500000000000001,
+  "pooled_chi2_per_dof": 0.4261405116286215
+ }
+}

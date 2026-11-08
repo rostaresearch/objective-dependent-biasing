@@ -1,0 +1,49 @@
+{
+ "potential_vs_audit_maxabs": 1.97216341444379e-14,
+ "potential_gradient_fd_maxabs": 6.174474265208119e-09,
+ "potential_gradient_max": 31.69289529649506,
+ "MFPT_U3": {
+  "bilinear_vs_scipy": 8.992806499463768e-15,
+  "bicubic_vs_scipy": 3.610445276081009e-13,
+  "bicubic_node_error": 1.554312234475219e-14,
+  "bilinear_grad_fd": 5.354896970288792e-09,
+  "bicubic_grad_fd": 6.568784627347668e-09,
+  "bicubic_range_fine": [
+   -3.4185516679813612,
+   3.725222103152062
+  ]
+ },
+ "spectral_U3": {
+  "bilinear_vs_scipy": 7.105427357601002e-15,
+  "bicubic_vs_scipy": 1.8118839761882555e-13,
+  "bicubic_node_error": 3.941291737419306e-15,
+  "bilinear_grad_fd": 6.125004503587661e-09,
+  "bicubic_grad_fd": 5.968539440459608e-09,
+  "bicubic_range_fine": [
+   -3.462890018991467,
+   3.6202000877709333
+  ]
+ },
+ "MFPT_U6": {
+  "bilinear_vs_scipy": 1.199040866595169e-14,
+  "bicubic_vs_scipy": 3.623767952376511e-13,
+  "bicubic_node_error": 1.2836606777533177e-13,
+  "bilinear_grad_fd": 7.395710710511594e-09,
+  "bicubic_grad_fd": 9.78132774775986e-09,
+  "bicubic_range_fine": [
+   -6.8356309480255355,
+   6.635920006645542
+  ]
+ },
+ "spectral_U6": {
+  "bilinear_vs_scipy": 8.881784197001252e-15,
+  "bicubic_vs_scipy": 3.694822225952521e-13,
+  "bicubic_node_error": 9.903102643482598e-15,
+  "bilinear_grad_fd": 7.880370134216719e-09,
+  "bicubic_grad_fd": 8.311882737643828e-09,
+  "bicubic_range_fine": [
+   -6.781767834821894,
+   6.674694939969449
+  ]
+ }
+}

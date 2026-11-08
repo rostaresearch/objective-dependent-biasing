@@ -1,0 +1,23 @@
+A/B thresholds: x <= -0.8421, x >= 0.8421
+20x10: A columns 2, n_A = 20 (plain x < -0.85 would give 2 columns)
+40x20: A columns 4, n_A = 80 (plain x < -0.85 would give 3 columns)
+80x40: A columns 7, n_A = 280 (plain x < -0.85 would give 6 columns)
+160x80: A columns 13, n_A = 1040 (plain x < -0.85 would give 12 columns)
+
+Table S1 (40x20, n_A = 80, n_B = 80)
+flattening             Ueff  3.00  Neff/N 0.4799  Crw   2.08  S_gamma  23.38  S_MFPT  17.59
+spectral               Ueff  3.00  Neff/N 0.2782  Crw   3.59  S_gamma  78.45  S_MFPT  23.71
+0.801 x spectral       Ueff  2.40  Neff/N 0.5000  Crw   2.00  S_gamma  42.26  S_MFPT  24.04
+MFPT                   Ueff  3.00  Neff/N 0.0113  Crw  88.52  S_gamma  49.24  S_MFPT  67.56
+0.303 x MFPT           Ueff  0.91  Neff/N 0.5000  Crw   2.00  S_gamma   3.01  S_MFPT   5.02
+
+MFPT optimum, all saved starts (identical MFPT, different undetermined B cells)
+best                   Ueff  3.00  Neff/N 0.0113  Crw  88.52  S_gamma  49.24  S_MFPT  67.56
+run_interp_coarse      Ueff  3.00  Neff/N 0.0162  Crw  61.84  S_gamma  49.44  S_MFPT  67.56
+run_interp_coarse_other Ueff  3.00  Neff/N 0.0143  Crw  69.82  S_gamma  49.67  S_MFPT  67.56
+run_saved_n800         Ueff  3.00  Neff/N 0.0113  Crw  88.52  S_gamma  49.24  S_MFPT  67.56
+run_flatten            Ueff  3.00  Neff/N 0.0148  Crw  67.79  S_gamma  49.67  S_MFPT  67.56
+run_zeros              Ueff  3.00  Neff/N 0.0207  Crw  48.30  S_gamma  49.63  S_MFPT  67.56
+run_random0            Ueff  3.00  Neff/N 0.0168  Crw  59.60  S_gamma  49.55  S_MFPT  67.56
+run_random1            Ueff  3.00  Neff/N 0.0170  Crw  58.82  S_gamma  49.55  S_MFPT  67.56
+run_random2            Ueff  3.00  Neff/N 0.0180  Crw  55.40  S_gamma  49.57  S_MFPT  67.56

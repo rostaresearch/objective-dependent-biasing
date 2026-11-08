@@ -1,0 +1,31 @@
+{
+ "job": "nine_well_80_U6_mfpt_part3",
+ "maxiter": 6000,
+ "ftol": 1e-12,
+ "system": "nine_well",
+ "grid": "80",
+ "n": 6400,
+ "U": 6.0,
+ "objective": "mfpt",
+ "best_start": "interp_coarse_other",
+ "best_value": 3509.8103549075904,
+ "value_spread_rel": 0.0,
+ "stationarity": {
+  "proj_grad_rel": 7.814959514600959e-08
+ },
+ "seconds": 353.1419041156769,
+ "runs": [
+  {
+   "start": "interp_coarse_other",
+   "fun": 3509.8103549075904,
+   "nit": 6000,
+   "nfev": 6215,
+   "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+   "success": false,
+   "proj_grad_inf": 0.0002742902582753004,
+   "proj_grad_rel": 7.814959514600959e-08,
+   "seconds": 353.09041571617126,
+   "value": 3509.8103549075904
+  }
+ ]
+}

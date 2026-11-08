@@ -1,0 +1,241 @@
+{
+  "note": "Independent Monte Carlo check of the exact model numbers (MFPT, C_TS, Omega_J).",
+  "primary": {
+    "unbiased": {
+      "n_paths": 20000,
+      "mode": "first_passage",
+      "mfpt_AB_exact": 79.74779618987013,
+      "mfpt_AB_MC": 79.47651336281646,
+      "mfpt_AB_MC_se": 0.41303993545940615,
+      "mfpt_z": -0.6567956358794498,
+      "last_crossing_TV_sampled_vs_exact": 0.016369570195328004,
+      "C_TS_exact": 0.9999999999999999,
+      "C_TS_exact_ref_vs_sampled_bias": 0.9836304298046719,
+      "current_TV_sampled_vs_exact": 0.41792879902225755,
+      "Omega_J_exact": 0.9999999999880993,
+      "Omega_J_exact_ref_vs_sampled_bias": 0.5820712009772546,
+      "current_TV_sampled_vs_exact_unbiased": 0.4179287990227454,
+      "edge_current_test": {
+        "n_edges": 40,
+        "n_batches": 20,
+        "max_abs_z": 2.7435789150048637,
+        "rms_z": 1.0028793120269142,
+        "max_rel_err": 0.14024809112862294,
+        "share_of_positive_current": 0.335696878182703
+      }
+    },
+    "spectral_U1": {
+      "n_paths": 20000,
+      "mode": "first_passage",
+      "mfpt_AB_exact": 65.07202184911627,
+      "mfpt_AB_MC": 64.86402732385865,
+      "mfpt_AB_MC_se": 0.37696208058883074,
+      "mfpt_z": -0.5517651137024759,
+      "last_crossing_TV_sampled_vs_exact": 0.016407179723013948,
+      "C_TS_exact": 0.8926986731786842,
+      "C_TS_exact_ref_vs_sampled_bias": 0.8902295395111456,
+      "current_TV_sampled_vs_exact": 0.4102935773415952,
+      "Omega_J_exact": 0.9204012933755727,
+      "Omega_J_exact_ref_vs_sampled_bias": 0.5835346481366382,
+      "current_TV_sampled_vs_exact_unbiased": 0.41646535186336175,
+      "edge_current_test": {
+        "n_edges": 40,
+        "n_batches": 20,
+        "max_abs_z": 2.3130340382997625,
+        "rms_z": 0.9188386000195725,
+        "max_rel_err": 0.09226503377954366,
+        "share_of_positive_current": 0.33580654013449973
+      }
+    },
+    "spectral_U2": {
+      "n_paths": 20000,
+      "mode": "first_passage",
+      "mfpt_AB_exact": 56.93914138824691,
+      "mfpt_AB_MC": 57.098231254252816,
+      "mfpt_AB_MC_se": 0.3556976193029914,
+      "mfpt_z": 0.44726154287355635,
+      "last_crossing_TV_sampled_vs_exact": 0.0198007393130468,
+      "C_TS_exact": 0.7672878951200615,
+      "C_TS_exact_ref_vs_sampled_bias": 0.7668181144328492,
+      "current_TV_sampled_vs_exact": 0.4108861795116895,
+      "Omega_J_exact": 0.8241303888080712,
+      "Omega_J_exact_ref_vs_sampled_bias": 0.5553209822494244,
+      "current_TV_sampled_vs_exact_unbiased": 0.4446790177505755,
+      "edge_current_test": {
+        "n_edges": 40,
+        "n_batches": 20,
+        "max_abs_z": 3.04290817855654,
+        "rms_z": 1.1812143992598834,
+        "max_rel_err": 0.108242826839958,
+        "share_of_positive_current": 0.35462817026113186
+      }
+    },
+    "spectral_U3": {
+      "n_paths": 20000,
+      "mode": "first_passage",
+      "mfpt_AB_exact": 51.341673277903425,
+      "mfpt_AB_MC": 51.571976106007945,
+      "mfpt_AB_MC_se": 0.3399007046756484,
+      "mfpt_z": 0.6775591369376167,
+      "last_crossing_TV_sampled_vs_exact": 0.013747388955492885,
+      "C_TS_exact": 0.727937845053207,
+      "C_TS_exact_ref_vs_sampled_bias": 0.7268758396541827,
+      "current_TV_sampled_vs_exact": 0.4112783889306548,
+      "Omega_J_exact": 0.7753219310862334,
+      "Omega_J_exact_ref_vs_sampled_bias": 0.5373816902357272,
+      "current_TV_sampled_vs_exact_unbiased": 0.4626183097642728,
+      "edge_current_test": {
+        "n_edges": 40,
+        "n_batches": 20,
+        "max_abs_z": 2.088763321833493,
+        "rms_z": 0.9322442961663937,
+        "max_rel_err": 0.10130928765992135,
+        "share_of_positive_current": 0.3686837384674221
+      }
+    },
+    "mfpt_AB_U1": {
+      "n_paths": 20000,
+      "mode": "first_passage",
+      "mfpt_AB_exact": 39.69430224842021,
+      "mfpt_AB_MC": 39.53942948847868,
+      "mfpt_AB_MC_se": 0.18331163301211437,
+      "mfpt_z": -0.8448605110145458,
+      "last_crossing_TV_sampled_vs_exact": 0.01769468463671737,
+      "C_TS_exact": 0.7850219926102496,
+      "C_TS_exact_ref_vs_sampled_bias": 0.7873074884080583,
+      "current_TV_sampled_vs_exact": 0.3081185155683097,
+      "Omega_J_exact": 0.8617201534233094,
+      "Omega_J_exact_ref_vs_sampled_bias": 0.6579993119349559,
+      "current_TV_sampled_vs_exact_unbiased": 0.342000688065044,
+      "edge_current_test": {
+        "n_edges": 40,
+        "n_batches": 20,
+        "max_abs_z": 2.9340403266209116,
+        "rms_z": 1.1424900056690928,
+        "max_rel_err": 0.22046168290409188,
+        "share_of_positive_current": 0.3550165669077861
+      }
+    },
+    "mfpt_AB_U2": {
+      "n_paths": 20000,
+      "mode": "first_passage",
+      "mfpt_AB_exact": 24.752319152656202,
+      "mfpt_AB_MC": 24.87999898164953,
+      "mfpt_AB_MC_se": 0.10930286199550363,
+      "mfpt_z": 1.1681288729528274,
+      "last_crossing_TV_sampled_vs_exact": 0.015895069789256144,
+      "C_TS_exact": 0.7160379116369249,
+      "C_TS_exact_ref_vs_sampled_bias": 0.7116986025532315,
+      "current_TV_sampled_vs_exact": 0.23338268128561096,
+      "Omega_J_exact": 0.7912807674933593,
+      "Omega_J_exact_ref_vs_sampled_bias": 0.6680273073884245,
+      "current_TV_sampled_vs_exact_unbiased": 0.33197269261157536,
+      "edge_current_test": {
+        "n_edges": 40,
+        "n_batches": 20,
+        "max_abs_z": 1.8900154717229125,
+        "rms_z": 0.9893049756858389,
+        "max_rel_err": 0.11116009148143365,
+        "share_of_positive_current": 0.38217309909638514
+      }
+    },
+    "mfpt_AB_U3": {
+      "n_paths": 20000,
+      "mode": "first_passage",
+      "mfpt_AB_exact": 16.784834391590337,
+      "mfpt_AB_MC": 16.746119366343013,
+      "mfpt_AB_MC_se": 0.07273156337425715,
+      "mfpt_z": -0.5323001933576886,
+      "last_crossing_TV_sampled_vs_exact": 0.016169748167905906,
+      "C_TS_exact": 0.7177174486377451,
+      "C_TS_exact_ref_vs_sampled_bias": 0.7145893944730597,
+      "current_TV_sampled_vs_exact": 0.1980308483921841,
+      "Omega_J_exact": 0.7680927863796756,
+      "Omega_J_exact_ref_vs_sampled_bias": 0.6697132989587458,
+      "current_TV_sampled_vs_exact_unbiased": 0.33028670104125424,
+      "edge_current_test": {
+        "n_edges": 40,
+        "n_batches": 20,
+        "max_abs_z": 2.6093384460674405,
+        "rms_z": 1.1074121880774765,
+        "max_rel_err": 0.13992383199214362,
+        "share_of_positive_current": 0.401757352592262
+      }
+    },
+    "two_sample_noise_unbiased": {
+      "C_TS_two_samples": 0.9756500000000001,
+      "Omega_J_two_samples": 0.6169078788256201
+    }
+  },
+  "alternative": {
+    "unbiased": {
+      "n_paths": 20000,
+      "mode": "doob",
+      "mfpt_AB_exact": 22.354096804994608,
+      "mfpt_AB_MC": 22.41430470932058,
+      "mfpt_AB_MC_se": 0.13886933560113038,
+      "mfpt_z": 0.4335579490270175,
+      "last_crossing_TV_sampled_vs_exact": 0.015053713399951001,
+      "C_TS_exact": 0.9999999999859459,
+      "C_TS_exact_ref_vs_sampled_bias": 0.9849462865957375,
+      "current_TV_sampled_vs_exact": 0.077358759528349,
+      "Omega_J_exact": 0.9999999999895318,
+      "Omega_J_exact_ref_vs_sampled_bias": 0.922641240470152,
+      "current_TV_sampled_vs_exact_unbiased": 0.07735875952984808,
+      "edge_current_test": {
+        "n_edges": 40,
+        "n_batches": 20,
+        "max_abs_z": 2.284810100333481,
+        "rms_z": 1.0255900930228703,
+        "max_rel_err": 0.10670518322402901,
+        "share_of_positive_current": 0.446963816989119
+      }
+    },
+    "spectral_U2": {
+      "n_paths": 20000,
+      "mode": "doob",
+      "mfpt_AB_exact": 5.46097512186575,
+      "mfpt_AB_MC": 5.404819690882241,
+      "mfpt_AB_MC_se": 0.03122323375825857,
+      "mfpt_z": -1.798514254426183,
+      "last_crossing_TV_sampled_vs_exact": 0.016730075051186455,
+      "C_TS_exact": 0.635321391098245,
+      "C_TS_exact_ref_vs_sampled_bias": 0.6382009362951155,
+      "current_TV_sampled_vs_exact": 0.05945374892227946,
+      "Omega_J_exact": 0.689820477531189,
+      "Omega_J_exact_ref_vs_sampled_bias": 0.6782479691468349,
+      "current_TV_sampled_vs_exact_unbiased": 0.32175203085316506,
+      "edge_current_test": {
+        "n_edges": 40,
+        "n_batches": 20,
+        "max_abs_z": 2.014829808815948,
+        "rms_z": 0.8625594682522355,
+        "max_rel_err": 0.11553462996511006,
+        "share_of_positive_current": 0.5629671033122368
+      }
+    },
+    "mfpt_AB_alternative_U2": {
+      "n_paths": 20000,
+      "mode": "doob",
+      "mfpt_AB_exact": 5.228933733171536,
+      "mfpt_AB_MC": 5.261903263891352,
+      "mfpt_AB_MC_se": 0.0313993387641524,
+      "mfpt_z": 1.0500071663119055,
+      "last_crossing_TV_sampled_vs_exact": 0.015931910928903763,
+      "C_TS_exact": 0.7344987776816188,
+      "C_TS_exact_ref_vs_sampled_bias": 0.7327619688385398,
+      "current_TV_sampled_vs_exact": 0.059505147907066284,
+      "Omega_J_exact": 0.7290701700315496,
+      "Omega_J_exact_ref_vs_sampled_bias": 0.7201472391036428,
+      "current_TV_sampled_vs_exact_unbiased": 0.2798527608963572,
+      "edge_current_test": {
+        "n_edges": 40,
+        "n_batches": 20,
+        "max_abs_z": 3.0730320031942733,
+        "rms_z": 0.9994456781947998,
+        "max_rel_err": 0.12025338107887316,
+        "share_of_positive_current": 0.5553076196179447
+      }
+    }
+  }
+}

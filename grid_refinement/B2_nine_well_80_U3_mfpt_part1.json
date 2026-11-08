@@ -1,0 +1,31 @@
+{
+ "job": "nine_well_80_U3_mfpt_part1",
+ "maxiter": 20000,
+ "ftol": 1e-13,
+ "system": "nine_well",
+ "grid": "80",
+ "n": 6400,
+ "U": 3.0,
+ "objective": "mfpt",
+ "best_start": "interp_reopt_40",
+ "best_value": 315714.3699872869,
+ "value_spread_rel": 0.0,
+ "stationarity": {
+  "proj_grad_rel": 2.0957811894865223e-08
+ },
+ "seconds": 37.876526832580566,
+ "runs": [
+  {
+   "start": "interp_reopt_40",
+   "fun": 315714.3699872869,
+   "nit": 575,
+   "nfev": 649,
+   "message": "ABNORMAL_TERMINATION_IN_LNSRCH",
+   "success": false,
+   "proj_grad_inf": 0.006616682378699442,
+   "proj_grad_rel": 2.0957811894865223e-08,
+   "seconds": 37.82170224189758,
+   "value": 315714.3699872869
+  }
+ ]
+}

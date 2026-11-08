@@ -1,0 +1,3 @@
+[
+ {"case": "unbiased", "interp": "none", "dt": 2e-4, "nwalk": 5000, "seed": 22, "expected": 724460, "lanes": 96, "max_hours": 5}
+]

@@ -1,0 +1,31 @@
+{
+ "job": "nine_well_80_U3_mfpt_part2",
+ "maxiter": 20000,
+ "ftol": 1e-13,
+ "system": "nine_well",
+ "grid": "80",
+ "n": 6400,
+ "U": 3.0,
+ "objective": "mfpt",
+ "best_start": "interp_coarse",
+ "best_value": 315714.3659982574,
+ "value_spread_rel": 0.0,
+ "stationarity": {
+  "proj_grad_rel": 1.4143609564021707e-08
+ },
+ "seconds": 83.05577754974365,
+ "runs": [
+  {
+   "start": "interp_coarse",
+   "fun": 315714.3659982574,
+   "nit": 1378,
+   "nfev": 1451,
+   "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+   "success": true,
+   "proj_grad_inf": 0.004465340726432003,
+   "proj_grad_rel": 1.4143609564021707e-08,
+   "seconds": 83.00273895263672,
+   "value": 315714.3659982574
+  }
+ ]
+}

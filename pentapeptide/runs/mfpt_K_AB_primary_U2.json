@@ -1,0 +1,63 @@
+{
+  "imported_optimizer": {
+    "fun": 24.752319153615847,
+    "time_s": 22.525294303894043,
+    "message": "mfpt_per_state.optimise_mfpt_per_state, starts: committor-shaped U(1-2q0), flatten, zeros"
+  },
+  "random0": {
+    "fun": 24.752319153476954,
+    "nit": 118,
+    "nfev": 130,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "time_s": 10.591862678527832
+  },
+  "random1": {
+    "fun": 24.752319153959004,
+    "nit": 126,
+    "nfev": 138,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "time_s": 8.143780708312988
+  },
+  "random2": {
+    "fun": 24.752319156693833,
+    "nit": 92,
+    "nfev": 101,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "time_s": 5.4317309856414795
+  },
+  "random3": {
+    "fun": 24.75231915670938,
+    "nit": 100,
+    "nfev": 105,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "time_s": 5.734014511108398
+  },
+  "random4": {
+    "fun": 24.752319153974888,
+    "nit": 114,
+    "nfev": 125,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "time_s": 7.846344470977783
+  },
+  "random5": {
+    "fun": 24.752319154790463,
+    "nit": 106,
+    "nfev": 113,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "time_s": 6.219846248626709
+  },
+  "TNC_from_zeros": {
+    "fun": 24.75231915265632,
+    "nit": 119,
+    "nfev": 566,
+    "message": "Converged (|f_n-f_(n-1)| ~= 0)",
+    "time_s": 35.07540416717529
+  },
+  "TNC_from_best": {
+    "fun": 24.752319152656202,
+    "nit": 2,
+    "nfev": 8,
+    "message": "Converged (|f_n-f_(n-1)| ~= 0)",
+    "time_s": 0.41506171226501465
+  }
+}

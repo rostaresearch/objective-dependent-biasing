@@ -1,0 +1,84 @@
+{
+  "flatten": {
+    "fun": -0.23638834876734666,
+    "nit": 468,
+    "nfev": 486,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "time_s": 35.90844464302063,
+    "gamma": 0.23638834876734666
+  },
+  "zeros": {
+    "fun": -0.2363883490583642,
+    "nit": 457,
+    "nfev": 504,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "time_s": 31.60573959350586,
+    "gamma": 0.2363883490583642
+  },
+  "random0": {
+    "fun": -0.23638834837184391,
+    "nit": 365,
+    "nfev": 400,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "time_s": 25.220611810684204,
+    "gamma": 0.23638834837184391
+  },
+  "random1": {
+    "fun": -0.2363883489925659,
+    "nit": 492,
+    "nfev": 534,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "time_s": 49.71333718299866,
+    "gamma": 0.2363883489925659
+  },
+  "random2": {
+    "fun": -0.23638834841531897,
+    "nit": 460,
+    "nfev": 481,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "time_s": 55.99379277229309,
+    "gamma": 0.23638834841531897
+  },
+  "random3": {
+    "fun": -0.23638834712745194,
+    "nit": 401,
+    "nfev": 473,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "time_s": 42.71945929527283,
+    "gamma": 0.23638834712745194
+  },
+  "random4": {
+    "fun": -0.23638834849560295,
+    "nit": 357,
+    "nfev": 377,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "time_s": 32.853676557540894,
+    "gamma": 0.23638834849560295
+  },
+  "random5": {
+    "fun": -0.2363883483360545,
+    "nit": 418,
+    "nfev": 445,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "time_s": 58.216641664505005,
+    "gamma": 0.2363883483360545
+  },
+  "softmin_from_best": {
+    "fun": -0.2363883417549013,
+    "nit": 1,
+    "nfev": 2,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "time_s": 0.4069240093231201,
+    "gamma": 0.2363883417549013,
+    "gamma_before_polish": 0.2363883417531147
+  },
+  "softmin_from_flatten": {
+    "fun": -0.23638834206717796,
+    "nit": 1,
+    "nfev": 2,
+    "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+    "time_s": 0.33191871643066406,
+    "gamma": 0.23638834206717796,
+    "gamma_before_polish": 0.23638834206538725
+  }
+}

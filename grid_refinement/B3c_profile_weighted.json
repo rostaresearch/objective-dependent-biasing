@@ -1,0 +1,92 @@
+{
+ "bottleneck/gap/40x20_vs_saved20x10": {
+  "weighted_rms_over_U": 0.061691636070322374,
+  "weight_in_cells_diff_gt_half_U": 0.0,
+  "unweighted_rms_over_U": 0.09433831045150516
+ },
+ "bottleneck/gap/80x40_vs_saved20x10": {
+  "weighted_rms_over_U": 0.058530513681080476,
+  "weight_in_cells_diff_gt_half_U": 0.0,
+  "unweighted_rms_over_U": 0.11201105089265467
+ },
+ "bottleneck/gap/80x40_vs_40x20": {
+  "weighted_rms_over_U": 0.01383373972200553,
+  "weight_in_cells_diff_gt_half_U": 0.0,
+  "unweighted_rms_over_U": 0.0288185244981012
+ },
+ "bottleneck/mfpt/40x20_vs_saved20x10": {
+  "weighted_rms_over_U": 0.049089672776498845,
+  "weight_in_cells_diff_gt_half_U": 0.0,
+  "unweighted_rms_over_U": 0.1914005099810144
+ },
+ "bottleneck/mfpt/80x40_vs_saved20x10": {
+  "weighted_rms_over_U": 0.04735715821152816,
+  "weight_in_cells_diff_gt_half_U": 0.0,
+  "unweighted_rms_over_U": 0.09079750139085317
+ },
+ "bottleneck/mfpt/80x40_vs_40x20": {
+  "weighted_rms_over_U": 0.017836954539027037,
+  "weight_in_cells_diff_gt_half_U": 0.0,
+  "unweighted_rms_over_U": 0.15822490047151253
+ },
+ "nine_well_U3/gap/20x20_reopt_vs_saved20x20": {
+  "weighted_rms_over_U": 0.007183101620901164,
+  "weight_in_cells_diff_gt_half_U": 7.871391056373034e-05,
+  "unweighted_rms_over_U": 0.3838678476920163
+ },
+ "nine_well_U3/gap/40x40_vs_saved20x20": {
+  "weighted_rms_over_U": 0.07437597282780532,
+  "weight_in_cells_diff_gt_half_U": 0.00010797845445323209,
+  "unweighted_rms_over_U": 0.31883210546491314
+ },
+ "nine_well_U3/gap/40x40_vs_reopt20x20": {
+  "weighted_rms_over_U": 0.07372999104106966,
+  "weight_in_cells_diff_gt_half_U": 2.5711713923979655e-05,
+  "unweighted_rms_over_U": 0.16680376511177697
+ },
+ "nine_well_U3/mfpt/20x20_reopt_vs_saved20x20": {
+  "weighted_rms_over_U": 0.00014467743267400967,
+  "weight_in_cells_diff_gt_half_U": 1.443830835796334e-08,
+  "unweighted_rms_over_U": 0.28960277021126163
+ },
+ "nine_well_U3/mfpt/40x40_vs_saved20x20": {
+  "weighted_rms_over_U": 0.02707399260090689,
+  "weight_in_cells_diff_gt_half_U": 1.6099170138960556e-06,
+  "unweighted_rms_over_U": 0.11630629601880782
+ },
+ "nine_well_U3/mfpt/40x40_vs_reopt20x20": {
+  "weighted_rms_over_U": 0.02707538481847987,
+  "weight_in_cells_diff_gt_half_U": 1.6957550261001526e-06,
+  "unweighted_rms_over_U": 0.26198980435206404
+ },
+ "nine_well_U6/gap/20x20_reopt_vs_saved20x20": {
+  "weighted_rms_over_U": 0.012222244531502094,
+  "weight_in_cells_diff_gt_half_U": 0.00014199298731032935,
+  "unweighted_rms_over_U": 0.31031083006550914
+ },
+ "nine_well_U6/gap/40x40_vs_saved20x20": {
+  "weighted_rms_over_U": 0.06755226204906818,
+  "weight_in_cells_diff_gt_half_U": 0.00028931069515468114,
+  "unweighted_rms_over_U": 0.34137005602027237
+ },
+ "nine_well_U6/gap/40x40_vs_reopt20x20": {
+  "weighted_rms_over_U": 0.06658030425368698,
+  "weight_in_cells_diff_gt_half_U": 0.00011223949009004139,
+  "unweighted_rms_over_U": 0.16555389430053083
+ },
+ "nine_well_U6/mfpt/20x20_reopt_vs_saved20x20": {
+  "weighted_rms_over_U": 0.0002680188058013955,
+  "weight_in_cells_diff_gt_half_U": 9.6895615283158e-08,
+  "unweighted_rms_over_U": 0.19638121565436095
+ },
+ "nine_well_U6/mfpt/40x40_vs_saved20x20": {
+  "weighted_rms_over_U": 0.04006256625617875,
+  "weight_in_cells_diff_gt_half_U": 8.967383119241591e-07,
+  "unweighted_rms_over_U": 0.17795857157675843
+ },
+ "nine_well_U6/mfpt/40x40_vs_reopt20x20": {
+  "weighted_rms_over_U": 0.04006223596073754,
+  "weight_in_cells_diff_gt_half_U": 8.721586686578692e-07,
+  "unweighted_rms_over_U": 0.1535820160634895
+ }
+}

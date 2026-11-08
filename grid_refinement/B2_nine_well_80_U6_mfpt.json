@@ -1,0 +1,99 @@
+{
+ "job": "nine_well_80_U6_mfpt",
+ "merged_from": [
+  "B2_nine_well_80_U6_mfpt_part1.json",
+  "B2_nine_well_80_U6_mfpt_part2.json",
+  "B2_nine_well_80_U6_mfpt_part3.json",
+  "B2_nine_well_80_U6_mfpt_part4.json",
+  "B2_nine_well_80_U6_mfpt_part5.json",
+  "B2_nine_well_80_U6_mfpt_part6.json"
+ ],
+ "maxiter": 6000,
+ "ftol": 1e-12,
+ "system": "nine_well",
+ "grid": "80",
+ "n": 6400,
+ "U": 6.0,
+ "objective": "mfpt",
+ "best_start": "interp_reopt_40",
+ "best_value": 3509.752463418523,
+ "value_spread_rel": 1.6494464971791303e-05,
+ "stationarity": {
+  "proj_grad_rel": 5.032570292165602e-08
+ },
+ "seconds": 2055.3787484169006,
+ "runs": [
+  {
+   "start": "interp_reopt_40",
+   "fun": 3509.752463418523,
+   "nit": 4862,
+   "nfev": 4997,
+   "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+   "success": true,
+   "proj_grad_inf": 0.00017663075980255098,
+   "proj_grad_rel": 5.032570292165602e-08,
+   "seconds": 292.2222089767456,
+   "value": 3509.752463418523
+  },
+  {
+   "start": "interp_coarse",
+   "fun": 3509.7525692296813,
+   "nit": 6000,
+   "nfev": 6160,
+   "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+   "success": false,
+   "proj_grad_inf": 0.00011772206221789872,
+   "proj_grad_rel": 3.354141350304255e-08,
+   "seconds": 353.49520206451416,
+   "value": 3509.7525692296813
+  },
+  {
+   "start": "interp_coarse_other",
+   "fun": 3509.8103549075904,
+   "nit": 6000,
+   "nfev": 6215,
+   "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+   "success": false,
+   "proj_grad_inf": 0.0002742902582753004,
+   "proj_grad_rel": 7.814959514600959e-08,
+   "seconds": 353.09041571617126,
+   "value": 3509.8103549075904
+  },
+  {
+   "start": "flatten",
+   "fun": 3509.752755616917,
+   "nit": 6000,
+   "nfev": 6181,
+   "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+   "success": false,
+   "proj_grad_inf": 0.00011578657784343217,
+   "proj_grad_rel": 3.2989952827341e-08,
+   "seconds": 351.27960538864136,
+   "value": 3509.752755616917
+  },
+  {
+   "start": "zeros",
+   "fun": 3509.7527037869245,
+   "nit": 6000,
+   "nfev": 6173,
+   "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+   "success": false,
+   "proj_grad_inf": 0.0001665464033424698,
+   "proj_grad_rel": 4.745246101321353e-08,
+   "seconds": 350.6460793018341,
+   "value": 3509.7527037869245
+  },
+  {
+   "start": "random0",
+   "fun": 3509.752960568782,
+   "nit": 6000,
+   "nfev": 6181,
+   "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+   "success": false,
+   "proj_grad_inf": 0.00044051740131102545,
+   "proj_grad_rel": 1.255123668987906e-07,
+   "seconds": 354.31172823905945,
+   "value": 3509.752960568782
+  }
+ ]
+}

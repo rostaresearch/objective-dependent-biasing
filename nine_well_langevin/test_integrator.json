@@ -1,0 +1,35 @@
+{
+ "description": "Checks of the Langevin integrator.\n\n1. Free diffusion (F = b = 0) in the reflecting box, start on the line x = 4, absorbed in the strip\n   x <= 1. Exact MFPT: ((L - 1)^2 - (L - 4)^2) / (2D). Euler-Maruyama with the boundary checked only\n   at the end of each step overestimates it; to first order the absorbing boundary moves outward by\n   beta sqrt(2 D dt) with beta = -zeta(1/2)/sqrt(2 pi) = 0.5826 (Siegmund's correction), which\n   adds (L - 1) beta sqrt(2 D dt) / D.\n2. Tabulated gradient of F (4096^2 table, bilinear) against the analytic gradient: the same walkers\n   (same random streams) on the MFPT-U6 bias, compared walker by walker.\n",
+ "free_diffusion": [
+  {
+   "dt": 0.0016,
+   "n": 40000,
+   "mean": 11.520804800000002,
+   "se": 0.056560193164550764,
+   "exact": 11.349555921538759,
+   "exact_plus_correction": 11.523672127278607,
+   "z_vs_exact": 3.027727963428778,
+   "z_vs_corrected": -0.050695146501047526
+  },
+  {
+   "dt": 0.0004,
+   "n": 40000,
+   "mean": 11.370439290000002,
+   "se": 0.05596282564913314,
+   "exact": 11.349555921538759,
+   "exact_plus_correction": 11.436614024408684,
+   "z_vs_exact": 0.3731650112196714,
+   "z_vs_corrected": -1.1824766466148906
+  }
+ ],
+ "table_vs_analytic": {
+  "dt": 0.0004,
+  "n": 2000,
+  "mean_analytic": 22.9591326,
+  "mean_table": 22.9635672,
+  "fraction_identical": 0.944,
+  "mean_paired_difference": 0.004434599999999995,
+  "se_paired_difference": 0.008652073901257225,
+  "relative_difference": 0.00019315189633949825
+ }
+}

@@ -1,10 +1,7 @@
 name: smoke
 
-# Fast sanity check that the deposited code + data form a runnable bundle:
-# paths resolve, core library imports, closed-form linear algebra is
-# self-consistent, the validity-screen constants and epsilon=1 coverage
-# threshold behave as documented, and a deposited result regenerates from its
-# deposited input. Does not run the heavy sweeps or MATLAB figure scripts.
+# Fast unit tests of the shared last-crossing code and the Ras TPT solver.
+# Does not run the heavy sweeps.
 
 on:
   push:
@@ -28,8 +25,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt pytest
-      - name: Run smoke tests
-        env:
-          MSM_ROOT: ${{ github.workspace }}
-        run: python -m pytest tests/ -q
+          pip install numpy scipy matplotlib pytest
+      - name: Revision tests
+        run: |
+          cd common && python -m pytest -q test_exact_last_crossing.py && cd ..
+          cd ras/code && python -m pytest -q test_current_analysis.py

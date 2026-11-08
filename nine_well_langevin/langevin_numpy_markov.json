@@ -1,0 +1,19 @@
+[
+ {
+  "case": "MFPT_U3",
+  "dt": 0.0004,
+  "nwalk": 1000,
+  "seed": 102,
+  "n_completed": 1000,
+  "n_censored": 0,
+  "mean_completed": 2057.9399968000002,
+  "mle_with_censoring": 2057.9399968000002,
+  "ci95_bootstrap": [
+   1934.8830727900001,
+   2183.0874269700003
+  ],
+  "network_continuum": 2021.7,
+  "ratio": 1.017925506652817,
+  "wall_s": 11810.850689649582
+ }
+]

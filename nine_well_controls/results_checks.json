@@ -1,0 +1,67 @@
+{
+ "gap_speedup": {
+  "nine_well/MFPT_U3": {
+   "symmetrized": 1.002525520764829,
+   "dense": 1.0025255207587915,
+   "rel_diff": 6.02218365806989e-12,
+   "stored": 1.0025255207585206,
+   "rel_diff_stored": 6.292395650085025e-12
+  },
+  "nine_well/spectral_U3": {
+   "symmetrized": 90.00257386011047,
+   "dense": 90.00257385881812,
+   "rel_diff": 1.4359026450537068e-11,
+   "stored": 90.00257385930898,
+   "rel_diff_stored": 8.905214279652454e-12
+  },
+  "nine_well/MFPT_U6": {
+   "symmetrized": 6.734252058292377,
+   "dense": 6.734252058213204,
+   "rel_diff": 1.1756778900773107e-11,
+   "stored": 6.734252058242938,
+   "rel_diff_stored": 7.341375842214513e-12
+  },
+  "nine_well/spectral_U6": {
+   "symmetrized": 357.25428234840075,
+   "dense": 357.2542823433129,
+   "rel_diff": 1.424147253094702e-11,
+   "stored": 357.2542823452014,
+   "rel_diff_stored": 8.955455946278294e-12
+  },
+  "bottleneck_grid/MFPT_U3": {
+   "symmetrized": 58.59737413741353,
+   "dense": 58.59737413667042,
+   "rel_diff": 1.2681694798031915e-11
+  },
+  "bottleneck_grid/spectral_U3": {
+   "symmetrized": 91.29565427968691,
+   "dense": 91.29565427853039,
+   "rel_diff": 1.266787557881886e-11,
+   "stored": 91.2956542797312,
+   "rel_diff_stored": 4.850288180956757e-13
+  },
+  "bottleneck_grid/polynomial_spectral_U3": {
+   "symmetrized": 68.28799241083654,
+   "dense": 68.28799240997337,
+   "rel_diff": 1.2640103844600728e-11,
+   "stored": 68.28799241105689,
+   "rel_diff_stored": 3.226826641607985e-12
+  }
+ },
+ "omega_forms": {
+  "n_biases": 1814,
+  "max_abs_difference": 3.3306690738754696e-16
+ },
+ "current_near_cut": {
+  "nine_well": {
+   "share_of_sum_abs_J": 0.16512778662717914,
+   "n_edges_touching": 74,
+   "n_edges": 760
+  },
+  "bottleneck_grid": {
+   "share_of_sum_abs_J": 0.1599503441509278,
+   "n_edges_touching": 48,
+   "n_edges": 370
+  }
+ }
+}

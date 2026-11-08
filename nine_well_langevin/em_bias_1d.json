@@ -1,0 +1,77 @@
+{
+ "description": "Size of the Euler-Maruyama time-step error on a barrier-crossing MFPT, computed without sampling.\n\n1D double well U(x) = a (x^2 - 1)^2 (barrier a kBT, curvature 8a at the minima, -4a at the top),\nD = 1. Exact continuum MFPT from x0 = -1 to the absorbing point x = c by quadrature,\n    T = int_{x0}^{c} dy e^{U(y)} int_{-inf}^{y} dz e^{-U(z)}.\nEM chain x' = x - dt U'(x) + sqrt(2 dt) xi, absorbed when x' >= c: its mean absorption time is solved\nexactly (up to a fine spatial quadrature of the Gaussian kernel) from (I - P) n = 1, T_EM = dt n(x0).\nRun for the curvatures and dt values used in the 2D runs, to see whether EM can account for a\n5-35% shortfall at dt = 4e-4.\n",
+ "rows": [
+  {
+   "barrier": 6.0,
+   "curvature_min": 48.0,
+   "dt": 0.0004,
+   "exact": 79.60582787692982,
+   "em": 79.32700345233395,
+   "relative_error": -0.0035025629659543034
+  },
+  {
+   "barrier": 6.0,
+   "curvature_min": 48.0,
+   "dt": 0.0002,
+   "exact": 79.60582787692982,
+   "em": 79.36425516879395,
+   "relative_error": -0.00303461083916301
+  },
+  {
+   "barrier": 6.0,
+   "curvature_min": 48.0,
+   "dt": 0.0001,
+   "exact": 79.60582787692982,
+   "em": 79.38743448036828,
+   "relative_error": -0.00274343477589567
+  },
+  {
+   "barrier": 9.0,
+   "curvature_min": 72.0,
+   "dt": 0.0004,
+   "exact": 1045.7345268951485,
+   "em": 1037.1255372569478,
+   "relative_error": -0.00823248101385854
+  },
+  {
+   "barrier": 9.0,
+   "curvature_min": 72.0,
+   "dt": 0.0002,
+   "exact": 1045.7345268951485,
+   "em": 1038.9362251315515,
+   "relative_error": -0.006500982408777833
+  },
+  {
+   "barrier": 9.0,
+   "curvature_min": 72.0,
+   "dt": 0.0001,
+   "exact": 1045.7345268951485,
+   "em": 1039.8096443097547,
+   "relative_error": -0.005665761656531654
+  },
+  {
+   "barrier": 12.0,
+   "curvature_min": 96.0,
+   "dt": 0.0004,
+   "exact": 15581.039656389792,
+   "em": 15394.185959788238,
+   "relative_error": -0.011992376678466754
+  },
+  {
+   "barrier": 12.0,
+   "curvature_min": 96.0,
+   "dt": 0.0002,
+   "exact": 15581.039656389792,
+   "em": 15436.287101407337,
+   "relative_error": -0.009290301428832581
+  },
+  {
+   "barrier": 12.0,
+   "curvature_min": 96.0,
+   "dt": 0.0001,
+   "exact": 15581.039656389792,
+   "em": 15455.183300462733,
+   "relative_error": -0.00807753261031241
+  }
+ ]
+}

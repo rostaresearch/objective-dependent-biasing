@@ -1,0 +1,89 @@
+{
+ "job": "nine_well_20_U6_gap",
+ "merged_from": [
+  "B2_nine_well_20_U6_gap_part1.json"
+ ],
+ "maxiter": 20000,
+ "ftol": 1e-13,
+ "system": "nine_well",
+ "grid": "20",
+ "n": 400,
+ "U": 6.0,
+ "objective": "gap",
+ "best_start": "flatten",
+ "best_value": 0.4585508214698809,
+ "value_spread_rel": 0.0004169997030790949,
+ "stationarity": {
+  "cluster_size": 2,
+  "lams": [
+   -1.5947115105991824e-16,
+   -0.45855082147047077,
+   -0.45893886025782343,
+   -0.4946483317803627,
+   -0.5165059077064346,
+   -0.5882331014014553,
+   -0.6861952100717832
+  ],
+  "rel_sep_l2_l3": 0.000846228529497141,
+  "lam3_over_lam2": 1.0008462285294972,
+  "single_eigvec_proj_grad_rel": 2.028592818078693e-05,
+  "clarke_proj_grad_rel": 1.2748194637533157e-07,
+  "clarke_Y": [
+   [
+    0.9997885274515487,
+    6.9356758591574026e-06
+   ],
+   [
+    6.9356758591574026e-06,
+    0.00021147254845129397
+   ]
+  ]
+ },
+ "seconds": 2318.061220407486,
+ "runs": [
+  {
+   "start": "interp_coarse",
+   "fun": -0.4583658077573386,
+   "nit": 3,
+   "nfev": 13,
+   "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+   "success": true,
+   "proj_grad_inf": 0.00015622217817469475,
+   "proj_grad_rel": 0.0003408242402264495,
+   "seconds": 5.643685817718506,
+   "stage1_gamma": 0.4583658077573386,
+   "stage1_rel_sep": 1.5147909395169786e-09,
+   "value": 0.4583658077573386
+  },
+  {
+   "start": "flatten",
+   "fun": -0.4583766004567072,
+   "nit": 786,
+   "nfev": 1370,
+   "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+   "success": true,
+   "proj_grad_inf": 0.0001424925561829141,
+   "proj_grad_rel": 0.00031086350402918187,
+   "seconds": 288.03047490119934,
+   "stage1_gamma": 0.4583766004567072,
+   "stage1_rel_sep": 3.526886786790988e-10,
+   "value": 0.4585508214698809,
+   "stage2_gamma": 0.4585508214698809,
+   "stage2_seconds": 1331.1686985492706
+  },
+  {
+   "start": "zeros",
+   "fun": -0.4583596059134813,
+   "nit": 901,
+   "nfev": 1527,
+   "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+   "success": true,
+   "proj_grad_inf": 0.04234959300863544,
+   "proj_grad_rel": 0.09239381582118739,
+   "seconds": 297.7163863182068,
+   "stage1_gamma": 0.4583596059134813,
+   "stage1_rel_sep": 2.550298515724336e-12,
+   "value": 0.4583596059134813
+  }
+ ]
+}

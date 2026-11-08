@@ -1,0 +1,43 @@
+{
+ "job": "nine_well_40_U6_mfpt_part3",
+ "maxiter": 6000,
+ "ftol": 1e-12,
+ "system": "nine_well",
+ "grid": "40",
+ "n": 1600,
+ "U": 6.0,
+ "objective": "mfpt",
+ "best_start": "random2",
+ "best_value": 837.3710990859734,
+ "value_spread_rel": 2.1199862369366712e-07,
+ "stationarity": {
+  "proj_grad_rel": 5.0240242824355046e-08
+ },
+ "seconds": 3997.7637639045715,
+ "runs": [
+  {
+   "start": "random1",
+   "fun": 837.3712766074939,
+   "nit": 6000,
+   "nfev": 6186,
+   "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+   "success": false,
+   "proj_grad_inf": 4.280304400306941e-05,
+   "proj_grad_rel": 5.111596874504777e-08,
+   "seconds": 2080.9447083473206,
+   "value": 837.3712766074939
+  },
+  {
+   "start": "random2",
+   "fun": 837.3710990859734,
+   "nit": 6000,
+   "nfev": 6171,
+   "message": "STOP: TOTAL NO. of ITERATIONS REACHED LIMIT",
+   "success": false,
+   "proj_grad_inf": 4.206972735217637e-05,
+   "proj_grad_rel": 5.0240242824355046e-08,
+   "seconds": 1916.5240685939789,
+   "value": 837.3710990859734
+  }
+ ]
+}
